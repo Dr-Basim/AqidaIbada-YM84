@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<title>الدراسات الإسلامية: العقيدة والعبادة - المحاضرة الرابعة: الإيمان بالرسل</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Tajawal:wght@500;700;800;900&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+/* ================= المتغيرات والألوان ================= */
+:root {
+  --navy: #0a1628;
+  --navy2: #152238;
+  --gold: #c9973a;
+  --gold-light: #e8c678;
+  --cream: #f9f8f4; 
+  --blue: #1d4ed8;
+  --green: #059669;
+  --red: #dc2626;
+  --text-main: #1e293b;
+  --text-muted: #475569;
+  
+  --font-title: 'Tajawal', sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', sans-serif;
+  --font-quran: 'Amiri', serif;
+  
+  --rad: 12px;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: var(--font-body); background: var(--cream); color: var(--text-main); overflow: hidden; }
+.app { height: 100%; display: flex; flex-direction: column; }
+
+/* ================= تلوين النصوص العلمي ================= */
+.term-blue { color: var(--blue); font-weight: 700; font-size: 1.05rem; }
+.hl-green { color: var(--green); font-weight: 700; }
+.hl-red { color: var(--red); font-weight: 700; }
+.section-head { color: var(--navy); font-weight: 800; font-size: 1.1rem; margin-top: 15px; margin-bottom: 5px; display: inline-block; border-bottom: 2px solid var(--gold); }
+
+/* ================= الهيدر ================= */
+.hdr { background: var(--navy); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.15); color: #fff; }
+.hdr-right { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.hdr-dr { color: var(--gold); font-family: var(--font-title); font-weight: 700; font-size: 0.95rem; }
+.logo-box { height: 45px; background: transparent; display: flex; align-items: center; justify-content: center; }
+.logo-box img { max-height: 100%; object-fit: contain; }
+.hdr-center { text-align: center; flex: 1; }
+.hdr-course { font-family: var(--font-quran); font-size: 1.8rem; color: var(--gold-light); font-weight: 700; margin-bottom: 2px; }
+.hdr-lecture { font-size: 0.95rem; color: #cbd5e1; font-family: var(--font-title); }
+.hdr-stu { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; color: #fff; }
+
+/* ================= التخطيط ================= */
+.main { flex: 1; overflow: hidden; position: relative; }
+.scr { position: absolute; inset: 0; overflow-y: auto; padding: 20px 20px 120px; display: none; opacity: 0; transition: 0.4s ease; max-width: 1000px; margin: 0 auto; width: 100%; scrollbar-width: thin; }
+.scr.on { display: block; opacity: 1; animation: fadeIn 0.4s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ================= شاشة الدخول ================= */
+.welcome-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: url('https://www.transparenttextures.com/patterns/arabesque.png') repeat, var(--cream); }
+.welcome-box { background: #fff; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 500px; width: 100%; text-align: center; border-top: 5px solid var(--navy); }
+.welcome-box .logo-box-login { background: transparent; height: 80px; margin-bottom: 15px; display: flex; justify-content: center; }
+.welcome-box .logo-box-login img { max-height: 100%; }
+.w-title { font-family: var(--font-title); color: var(--navy); font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; }
+.w-sub { color: var(--gold); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.w-dr { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; }
+.welcome-input { width: 100%; padding: 16px; border-radius: 8px; border: 1px solid var(--border); outline: none; margin-bottom: 15px; font-family: var(--font-body); font-size: 1rem; text-align: center; background: #fdfbf7; transition: 0.3s; }
+.welcome-input:focus { border-color: var(--gold); background: #fff; }
+.w-btn { width: 100%; background: var(--navy); color: #fff; padding: 16px; border-radius: 8px; font-family: var(--font-title); font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+.w-btn:hover { background: var(--gold); color: var(--navy); }
+
+/* ================= 0. شاشة الفيديو التمهيدية ================= */
+.video-wrapper { margin: 20px 0; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); border: 3px solid var(--gold); background: #0a1628; display: flex; justify-content: center; align-items: center; position: relative; }
+.video-wrapper video { width: 100%; max-height: 500px; display: block; object-fit: cover; }
+.num-list { list-style: none; padding: 0; margin: 16px 0; counter-reset: item; }
+.num-list li { counter-increment: item; padding: 14px 50px 14px 14px; margin-bottom: 10px; background: linear-gradient(90deg, #f8f6f1, #fff); border-radius: 14px; border: 1px solid rgba(0,0,0,.05); position: relative; line-height: 1.8; }
+.num-list li::before { content: counter(item); position: absolute; right: 12px; top: 12px; width: 30px; height: 30px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: .85rem; }
+.gold-text { color: var(--gold); font-weight: 800; }
+
+/* ================= 1. البانر الرئيسي ================= */
+.hero-banner { background: #fcf9f2; border: 1px solid #eaddc4; border-radius: var(--rad); padding: 30px; text-align: center; margin-bottom: 30px; margin-top: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.hero-icon { font-size: 2.5rem; margin-bottom: 10px; }
+.hero-title { font-family: var(--font-title); font-size: 2.2rem; color: var(--navy); font-weight: 900; margin-bottom: 10px; }
+.hero-sub { color: var(--gold); font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; }
+.hero-line { height: 3px; background: linear-gradient(to left, transparent, var(--gold), transparent); margin: 20px auto; width: 80%; }
+.hero-tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.hero-tag { background: #fff; border: 1px solid #eaddc4; padding: 6px 18px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+
+/* ================= 2. شبكات المعلومات ================= */
+.block-header { font-family: var(--font-title); font-size: 1.6rem; color: var(--navy); font-weight: 900; margin: 30px 0 15px; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 30px; }
+.info-card { background: #fff; border: 1px solid var(--border); border-radius: var(--rad); padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.info-card-icon { font-size: 2rem; margin-bottom: 10px; }
+.info-card-title { font-family: var(--font-title); font-weight: 900; color: var(--navy); font-size: 1.1rem; margin-bottom: 8px; }
+.info-card-desc { color: var(--text-main); font-size: 0.95rem; line-height: 1.6; }
+
+/* ================= 3. المدخل والآية ================= */
+.intro-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 15px; border-right: 4px solid var(--gold); padding-right: 15px; background: #fff; padding: 15px; border-radius: 8px; }
+.verse-box { background: #fdfaf3; border: 2px solid #eaddc4; border-radius: var(--rad); padding: 30px; text-align: center; margin-bottom: 30px; box-shadow: inset 0 0 20px rgba(201,151,58,0.05); }
+.verse-basmala { font-family: var(--font-quran); color: var(--gold); font-size: 1.8rem; margin-bottom: 10px; }
+.verse-text { font-family: var(--font-quran); font-size: 1.6rem; color: var(--navy); line-height: 2.2; margin-bottom: 15px; }
+.verse-ref { font-size: 1rem; color: var(--gold); font-weight: 700; font-family: var(--font-title); }
+
+/* ================= 4. النص الشامل (الأكورديون) ================= */
+.accordion { background: #fff; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); overflow: hidden; }
+.accordion-header { padding: 18px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-title); font-weight: 800; font-size: 1.15rem; color: var(--navy); background: linear-gradient(to left, #fff, #fdfbf7); transition: 0.3s; border-right: 4px solid var(--gold); }
+.accordion-header:hover { background: var(--cream); }
+.accordion-icon { color: var(--gold); font-weight: bold; font-size: 1.2rem; transition: 0.3s; }
+.accordion.active .accordion-icon { transform: rotate(45deg); }
+.accordion-body { max-height: 0; overflow: hidden; transition: 0.5s ease; padding: 0 20px; font-size: 1.05rem; line-height: 2.1; color: var(--text-main); }
+.accordion.active .accordion-body { padding: 25px 20px; max-height: 4000px; border-top: 1px solid var(--border); }
+.accordion-body ul, .accordion-body ol { margin-right: 25px; margin-bottom: 15px; margin-top: 10px; }
+.accordion-body li { margin-bottom: 10px; padding-right: 5px; }
+
+/* ================= 5. الخرائط الذهنية ================= */
+.tree-container { display: flex; flex-direction: column; align-items: center; background: #fff; border: 1px solid var(--border); border-radius: var(--rad); padding: 30px; overflow-x: auto; margin-bottom: 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.tree-root { background: var(--navy); color: #fff; padding: 12px 30px; border-radius: 8px; font-family: var(--font-title); font-weight: 800; font-size: 1.2rem; border-bottom: 3px solid var(--gold); margin-bottom: 30px; position: relative; z-index: 2; }
+.tree-branches { display: flex; gap: 20px; position: relative; justify-content: center; }
+.tree-branches::before { content: ''; position: absolute; top: -16px; left: 15%; right: 15%; height: 2px; background: var(--gold); }
+.tree-branches::after { content: ''; position: absolute; top: -30px; left: 50%; width: 2px; height: 16px; background: var(--gold); }
+.tree-node { position: relative; display: flex; flex-direction: column; align-items: center; width: 180px; }
+.tree-node::before { content: ''; position: absolute; top: -16px; left: 50%; width: 2px; height: 16px; background: var(--gold); }
+.tree-leaf { background: #fdfbf7; border: 1px solid var(--gold); color: var(--navy); padding: 15px; border-radius: 8px; text-align: center; width: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.tree-leaf h4 { font-family: var(--font-title); font-size: 1.05rem; font-weight: 900; margin-bottom: 8px; }
+.tree-leaf p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; font-weight: 600; }
+
+/* ================= 6. التمارين ================= */
+.app-scenario { background: #f8fafc; border-right: 4px solid var(--blue); padding: 15px 20px; border-radius: 8px; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.7; font-weight: 600; color: var(--navy); }
+.ex-box { border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+.ex-q { font-weight: 700; font-size: 1.1rem; margin-bottom: 15px; color: var(--navy); }
+.ex-opts { display: flex; gap: 10px; flex-wrap: wrap; }
+.ex-btn { flex: 1; min-width: 140px; background: #f8fafc; border: 1px solid var(--border); padding: 12px; border-radius: 8px; font-family: var(--font-body); font-weight: 600; cursor: pointer; transition: 0.2s; color: var(--navy); }
+.ex-btn:hover { border-color: var(--gold); background: #fff; }
+.ex-fb { display: none; margin-top: 15px; padding: 15px; border-radius: 8px; font-size: 0.95rem; font-weight: 700; line-height: 1.6; }
+.ex-fb.right { display: block; background: #d1fae5; color: #065f46; border: 1px solid var(--green); }
+.ex-fb.wrong { display: block; background: #fee2e2; color: #991b1b; border: 1px solid var(--red); }
+
+.game-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.g-item, .g-choice { padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 60px; transition: 0.2s; font-size: 0.95rem; line-height: 1.5; }
+.g-item { background: var(--navy); color: #fff; }
+.g-choice { background: #fff; border: 2px solid var(--gold); color: var(--navy); }
+.g-item.active { transform: scale(1.05); background: var(--gold); }
+.g-choice:hover { background: #fdfbf7; }
+.g-item.done, .g-choice.done { opacity: 0.5; background: var(--green) !important; border-color: var(--green) !important; color: #fff !important; pointer-events: none; }
+
+/* ================= شريط التقدم والأزرار ================= */
+.progress-tracker { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px 20px; border-radius: 12px; border: 1px solid var(--border); margin: 20px 0; font-weight: 700; color: var(--navy); }
+.prog-dots { display: flex; gap: 8px; }
+.prog-dot { width: 14px; height: 14px; border-radius: 50%; background: #e2e8f0; transition: 0.3s; }
+.prog-dot.done { background: var(--green); box-shadow: 0 0 8px rgba(5,150,105,0.4); }
+
+.nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+.nav-btn { border: none; padding: 14px 28px; border-radius: 30px; font-family: var(--font-title); font-weight: 800; font-size: 1.1rem; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.btn-gold { background: var(--gold); color: #fff; }
+.btn-navy { background: var(--navy); color: #fff; }
+.btn-outline { background: #fff; border: 2px solid var(--navy); color: var(--navy); }
+.nav-btn:disabled { background: #cbd5e1; color: #64748b; box-shadow: none; cursor: not-allowed; }
+
+/* ================= التبويبات السفلية والنوازل ================= */
+.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.98); border-top: 3px solid var(--gold); padding: 10px 20px max(10px, env(safe-area-inset-bottom)); box-shadow: 0 -5px 20px rgba(0,0,0,0.05); display: none; }
+.bottom-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; gap: 15px; }
+.btab { background: transparent; border: none; color: var(--text-muted); font-family: var(--font-title); font-weight: 800; font-size: 1.05rem; padding: 10px 20px; border-radius: 12px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+.btab.act { background: var(--navy); color: var(--gold-light); }
+.btab.locked { opacity: 0.4; cursor: not-allowed; }
+
+.essay-item { border-radius: 12px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+.essay-navy .essay-q { background: var(--navy); color: #fff; border-bottom: 3px solid var(--gold); }
+.essay-gold .essay-q { background: var(--gold); color: var(--navy); border-bottom: 3px solid var(--navy); }
+.essay-q { padding: 18px 20px; font-family: var(--font-title); font-weight: 800; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; gap: 15px; }
+.essay-q::before { content: "▼"; font-size: 0.9rem; transition: 0.3s; }
+.essay-item.open .essay-q::before { transform: rotate(180deg); }
+.essay-a { max-height: 0; overflow: hidden; transition: 0.4s ease; background: #fff; font-size: 1.05rem; line-height: 1.9; color: var(--text-main); }
+.essay-item.open .essay-a { padding: 20px; max-height: 1000px; }
+
+/* التقييم النهائي والمراجعة */
+.qz-card { background: #fff; border-radius: 12px; padding: 30px; margin-bottom: 20px; border: 1px solid var(--border); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.qz-opt { display: block; width: 100%; padding: 16px; margin: 10px 0; border: 2px solid #e2e8f0; border-radius: 8px; background: #fff; cursor: pointer; text-align: right; font-family: var(--font-body); font-size: 1rem; font-weight: 600; transition: 0.2s; }
+.qz-opt:hover { border-color: var(--navy); background: #f8fafc; }
+.qz-opt.right { background: var(--green); color: #fff; border-color: var(--green); }
+.qz-opt.wrong { background: var(--red); color: #fff; border-color: var(--red); }
+
+.fc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px;}
+.fc { height: 180px; perspective: 1000px; cursor: pointer; }
+.fc-in { position: relative; width: 100%; height: 100%; transition: 0.6s; transform-style: preserve-3d; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.fc.flip .fc-in { transform: rotateY(180deg); }
+.fc-f, .fc-b { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 16px; padding: 20px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.6; }
+.fc-f { background: var(--navy); color: #fff; font-weight: 700; font-size: 1.1rem; border: 2px solid var(--gold); }
+.fc-b { background: #fff; border: 2px solid var(--navy); color: var(--navy); transform: rotateY(180deg); font-weight: 600; }
+
+.toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: var(--navy); color: var(--gold-light); padding: 12px 25px; border-radius: 30px; font-weight: 700; z-index: 1000; opacity: 0; transition: 0.3s; pointer-events: none; border: 1px solid var(--gold); }
+.toast.on { opacity: 1; }
+
+/* ================= أزرار الطي/الفتح ================= */
+.toggle-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: 0.25s;
+  font-family: var(--font-body);
+  flex-shrink: 0;
+}
+.toggle-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+.hdr-left { display: flex; align-items: center; gap: 10px; }
+
+.hdr.collapsed { padding: 4px 20px; border-bottom-width: 2px; }
+.hdr.collapsed .hdr-right,
+.hdr.collapsed .hdr-center,
+.hdr.collapsed .hdr-stu { display: none; }
+.hdr.collapsed .hdr-toggle { transform: rotate(180deg); }
+
+.bbar-toggle {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--navy);
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  border-bottom: none;
+  padding: 4px 18px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 800;
+  z-index: 101;
+  font-family: var(--font-title);
+  transition: 0.25s;
+}
+.bbar-toggle:hover { background: var(--gold); color: var(--navy); }
+.bbar-toggle.collapsed { transform: translateX(-50%) rotate(180deg); }
+
+.bottom-bar.collapsed { padding: 4px 20px; border-top-width: 2px; }
+.bottom-bar.collapsed .bottom-inner { display: none; }
+
+/* ================= رابط لوحة التحكم في شاشة الدخول ================= */
+.admin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-title);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.25s;
+  text-decoration: none;
+}
+.admin-link:hover { color: var(--gold); background: #fdfbf7; }
+
+/* ================= نافذة لوحة التحكم (Modal) ================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.72);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.modal-backdrop.on { display: flex; animation: fadeIn 0.3s; }
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  border-top: 5px solid var(--gold);
+  animation: modalIn 0.35s;
+}
+@keyframes modalIn { from { opacity: 0; transform: translateY(20px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.modal-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.modal-title { font-family: var(--font-title); font-weight: 800; font-size: 1.2rem; color: var(--gold-light); display: flex; align-items: center; gap: 8px; }
+.modal-close {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-close:hover { background: var(--red); border-color: var(--red); }
+.modal-body { padding: 25px; }
+
+.form-section-title {
+  font-family: var(--font-title);
+  font-weight: 800;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 18px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--border);
+}
+.form-section-title:first-child { margin-top: 0; }
+
+.form-group { margin-bottom: 14px; }
+.form-label {
+  display: block;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: #fdfbf7;
+  transition: 0.25s;
+  outline: none;
+}
+.form-input:focus { border-color: var(--gold); background: #fff; }
+
+.advanced-section {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 14px;
+}
+.advanced-section summary {
+  cursor: pointer;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.92rem;
+  padding: 4px 0;
+  list-style: none;
+  user-select: none;
+}
+.advanced-section summary::before { content: '⚙️ '; }
+.advanced-section[open] summary { margin-bottom: 12px; }
+.advanced-section .form-group { margin-bottom: 10px; }
+.advanced-section .form-group:last-child { margin-bottom: 0; }
+
+.login-prompt { text-align: center; padding: 10px 0; }
+.login-prompt-icon { font-size: 3rem; margin-bottom: 10px; }
+.login-prompt-text { color: var(--text-muted); margin-bottom: 18px; font-size: 0.98rem; line-height: 1.6; }
+.login-hint {
+  margin-top: 15px;
+  padding: 10px 12px;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  color: #92400e;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+.modal-actions .nav-btn { flex: 1; min-width: 140px; padding: 12px 18px; font-size: 1rem; }
+.btn-save { background: var(--green); color: #fff; }
+.btn-save:hover { background: #047857; }
+.btn-reset { background: var(--red); color: #fff; }
+.btn-reset:hover { background: #b91c1c; }
+.btn-cancel { background: var(--text-muted); color: #fff; }
+.btn-cancel:hover { background: #334155; }
+
+.toast-admin {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  z-index: 10000;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+  background: var(--green);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.toast-admin.on { opacity: 1; }
+.toast-admin.error { background: var(--red); }
+
+@media (max-width: 600px) {
+  .modal-actions .nav-btn { min-width: 100%; }
+}
+
+/* ================= تحسينات العرض التعليمي البصري ================= */
+/* إصلاح ترقيم القوائم في RTL: مساحة مستقلة وثابتة للدائرة */
+.num-list li {
+  padding-block: 15px !important;
+  padding-inline-start: 68px !important;
+  padding-inline-end: 18px !important;
+  min-height: 58px;
+  display: flex;
+  align-items: flex-start;
+  text-align: right;
+  overflow: visible;
+}
+.num-list li::before {
+  right: auto !important;
+  left: auto !important;
+  inset-inline-start: 16px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  box-shadow: 0 3px 8px rgba(201,151,58,.28);
+}
+.num-list li > * { position: relative; z-index: 1; }
+
+/* بناء إيقاع بصري داخل النص العلمي الطويل */
+.accordion-body { background: linear-gradient(180deg, #fff 0%, #fdfcf9 100%); }
+.accordion-body > p {
+  margin: 0 0 14px !important;
+  padding: 15px 18px;
+  line-height: 2.05 !important;
+  background: #fff;
+  border: 1px solid #edf0f3;
+  border-inline-start: 4px solid #cbd5e1;
+  border-radius: 10px;
+}
+.accordion-body > p:nth-of-type(even) { background: #f8fafc; }
+.accordion-body > ul:not(.num-list),
+.accordion-body > ol:not(.num-list) {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 42px 10px 18px;
+}
+.accordion-body li::marker { color: var(--gold); font-weight: 900; }
+
+/* صناديق دلالية: القاعدة، التعريف، النتيجة، الدليل، المثال */
+.edu-callout {
+  position: relative;
+  margin: 18px 0 !important;
+  padding: 44px 20px 18px !important;
+  border-radius: 13px !important;
+  box-shadow: 0 3px 10px rgba(15,23,42,.05);
+}
+.edu-callout::before {
+  content: attr(data-label);
+  position: absolute;
+  inset-inline-start: 16px;
+  top: 10px;
+  font-family: var(--font-title);
+  font-size: .82rem;
+  font-weight: 900;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.callout-rule { background: #f3f7ff !important; border: 1px solid #c7d7fe !important; border-inline-start: 5px solid var(--blue) !important; }
+.callout-rule::before { background: var(--blue); color: #fff; }
+.callout-definition { background: #f4fbf8 !important; border: 1px solid #bfe7d5 !important; border-inline-start: 5px solid var(--green) !important; }
+.callout-definition::before { background: var(--green); color: #fff; }
+.callout-result { background: #fff9ed !important; border: 1px solid #ecd7a8 !important; border-inline-start: 5px solid var(--gold) !important; }
+.callout-result::before { background: var(--gold); color: var(--navy); }
+.callout-evidence { background: #fdfaf3 !important; border: 1px solid #e7d4aa !important; border-inline-start: 5px solid var(--gold) !important; font-family: var(--font-quran); font-size: 1.12rem; }
+.callout-evidence::before { background: var(--navy); color: var(--gold-light); font-family: var(--font-title); }
+.callout-example { background: #f8fafc !important; border: 1px dashed #94a3b8 !important; border-inline-start: 5px solid #64748b !important; }
+.callout-example::before { background: #64748b; color: #fff; }
+
+/* كلمات مفتاحية ومسارات وعلاقات */
+.term-gold { color: #9a681c; font-weight: 900; }
+.accordion-body strong, .intro-text strong { color: var(--navy); font-weight: 900; }
+.keyword-blue { color: var(--blue); font-weight: 800; }
+.keyword-green { color: var(--green); font-weight: 800; }
+.learning-flow {
+  background: linear-gradient(90deg, #f3f7ff, #fff9ed) !important;
+  border: 1px solid #d8e0ee !important;
+  border-inline-start: 5px solid var(--gold) !important;
+  font-size: 1.08rem;
+  word-spacing: 4px;
+}
+.verse-panel {
+  font-family: var(--font-quran);
+  font-size: 1.18rem;
+  text-align: center;
+  background: #fdfaf3 !important;
+  border: 2px solid #eaddc4 !important;
+  border-inline-start: 5px solid var(--gold) !important;
+  line-height: 2.25 !important;
+}
+
+/* تحسين المقارنات والبطاقات والمسافات */
+.info-card { position: relative; overflow: hidden; }
+.info-card::after { content: ''; position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: 4px; background: var(--gold); opacity: .65; }
+.info-card:nth-child(2n) { background: #fbfcfe; }
+.info-card:nth-child(3n) { background: #fdfbf7; }
+.intro-text { background: linear-gradient(90deg, #fff, #fdfbf7); }
+.block-header { position: relative; padding-inline-start: 18px; }
+.block-header::before { content: ''; position: absolute; inset-inline-start: 0; top: .3em; width: 7px; height: 1.15em; border-radius: 5px; background: var(--gold); }
+
+@media (max-width: 600px) {
+  .num-list li { padding-inline-start: 62px !important; padding-inline-end: 14px !important; }
+  .num-list li::before { inset-inline-start: 14px; }
+  .accordion-body > p { padding: 13px 14px; }
+  .edu-callout { padding: 43px 15px 15px !important; }
+}
+
+/* ===== إصلاح ترقيم القوائم فقط: الدائرة عنصر مستقل في التدفق ===== */
+.num-list li {
+  display: flow-root !important;
+  padding: 14px 18px !important;
+  min-height: 62px !important;
+  position: relative !important;
+  text-align: right !important;
+}
+.num-list li::before {
+  position: static !important;
+  float: right !important;
+  margin: 0 0 0 18px !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  z-index: auto !important;
+}
+@media (max-width: 600px) {
+  .num-list li { padding: 14px !important; }
+  .num-list li::before { margin-left: 14px !important; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+<!-- ================= HEADER ================= -->
+<header class="hdr" id="mainHeader" style="display:none">
+<div class="hdr-right">
+<div class="logo-box">
+<img alt="شعار الجامعة" onerror="this.style.display='none'; this.parentElement.textContent='جامعة طيبة'" src="../../logo.png"/>
+</div>
+<div class="hdr-dr">د/ باسم القرافي</div>
+</div>
+<div class="hdr-center">
+<div class="hdr-course">الدراسات الإسلامية: العقيدة والعبادة</div>
+<div class="hdr-lecture">المحاضرة الرابعة: الإيمان بالرسل</div>
+</div>
+<div class="hdr-left">
+<div class="hdr-stu" id="stuInfo"></div>
+<button aria-label="طي أو فتح الهيدر" class="toggle-btn" id="hdrToggle" onclick="toggleHeader()" title="طي/فتح الهيدر">▼</button>
+</div>
+</header>
+<div class="main">
+<!-- ================= شاشة الدخول ================= -->
+<div class="scr on" id="s-login" style="padding:0; max-width: none;">
+<div class="welcome-wrap">
+<div class="welcome-box">
+<div class="logo-box-login">
+<img alt="شعار الجامعة" onerror="this.style.display='none'" src="../../logo.png"/>
+</div>
+<h1 class="w-title">الدراسات الإسلامية: العقيدة والعبادة</h1>
+<div class="w-sub">المحاضرة الرابعة: الإيمان بالرسل</div>
+<div class="w-dr">إعداد: د/ باسم القرافي</div>
+<input class="welcome-input" id="iName" placeholder="أدخل اسمك الكامل هنا..." type="text"/>
+<input class="welcome-input" id="iSec" placeholder="رقم الشعبة (مثال: YM3)" type="text"/>
+<button class="w-btn" onclick="doLogin()">ابدأ رحلة التعلم</button>
+<button class="admin-link" onclick="showAdminPanel()">⚙️ لوحة تحكم أستاذ المادة</button>
+</div>
+</div>
+</div>
+<!-- ================= 0. شاشة الفيديو التمهيدية ================= -->
+<div class="scr" id="s-0">
+<div class="hero-banner" style="background:#0a1628; border-color:var(--gold); padding:40px;">
+<div class="hero-icon" style="color:var(--gold);">🎥</div>
+<div class="hero-title" style="color:#fff; font-family:var(--font-quran);">تمهيد وملخص المحاضرة</div>
+<div class="hero-sub" style="color:var(--gold-light);">شاهد الملخص المرئي لأهم محاور الإيمان بالرسل قبل البدء بالتفاصيل</div>
+</div>
+<div class="video-wrapper">
+<video controls="" playsinline="" poster="https://www.transparenttextures.com/patterns/arabesque.png" preload="metadata">
+<source src="summary.mp4" type="video/mp4"/>
+عذراً، متصفحك لا يدعم تشغيل مقاطع الفيديو.
+</video>
+</div>
+<div class="block-header">نظرة عامة على موضوعات المحاضرة</div>
+<div style="background:#fff; padding:20px; border-radius:12px; border:1px solid var(--border);">
+<p style="font-size:1.1rem; line-height:1.8; margin-bottom:15px;">تتناول هذه المحاضرة الركن الرابع من أركان الإيمان، وتتوزع موضوعاتها عبر ستة محاور علمية متكاملة:</p>
+<ul class="num-list">
+<li><span class="gold-text">منزلة الإيمان بالرسل وتاريخ إرسالهم:</span> بداية البشرية، والقدوة البشرية، وحكم تكذيب الرسل.</li>
+<li><span class="gold-text">حكمة إرسال الرسل:</span> إخراج العباد للتوحيد، وإقامة الحجة، وبيان الغاية والمغيبات، والتزكية.</li>
+<li><span class="gold-text">مقتضيات الإيمان بالرسل:</span> النبوة وهبية، وعموم رسالة محمد ﷺ، وبشريتهم، وأولو العزم، ووحدة الدين، والعصمة.</li>
+<li><span class="gold-text">دلائل نبوة محمد ﷺ:</span> المعجزات الخالدة، واستدلال هرقل، وشمائل النبي وسيرته، وتزايد أتباعه.</li>
+<li><span class="gold-text">حقوق النبي محمد ﷺ:</span> التصديق والطاعة، والمحبة، والتوقير، وموالاة الآل والصحب، والحذر من البدع والغلو.</li>
+<li><span class="gold-text">ثمرات الإيمان بالرسل والخلاصات:</span> استشعار رحمة الله، ومحبة الأنبياء، والفروق العقدية الجوهرية.</li>
+</ul>
+</div>
+<div class="nav-row">
+<div></div>
+<button class="nav-btn btn-navy" onclick="goSlide(1)">التالي: منزلة الإيمان بالرسل ➜</button>
+</div>
+</div>
+<!-- ================= 1. الباب الأول ================= -->
+<div class="scr" data-req="4" id="s-1">
+<div class="hero-banner">
+<div class="hero-icon">📜</div>
+<div class="hero-title">الباب الأول: منزلة الإيمان بالرسل وتاريخ إرسالهم</div>
+<div class="hero-sub">من بداية الاستقامة إلى إرسال النذير وحكم التصديق</div>
+<div class="hero-line"></div>
+<div class="hero-tags">
+<div class="hero-tag">الهبوط</div>
+<div class="hero-tag">عشرة قرون</div>
+<div class="hero-tag">نوح عليه السلام</div>
+<div class="hero-tag">القدوة البشرية</div>
+<div class="hero-tag">حكم التكذيب</div>
+</div>
+</div>
+<div class="block-header">مخرجات التعلم</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">🎯</div>
+<div class="info-card-title">تاريخ البداية</div>
+<div class="info-card-desc">يتعرف على تاريخ الاستقامة وبداية إرسال الرسل بعد الانحراف.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">👤</div>
+<div class="info-card-title">حكمة البشرية</div>
+<div class="info-card-desc">يفسر حكمة جعل الرسل من جنس البشر ليكونوا أسوة عملية.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⚖️</div>
+<div class="info-card-title">حكم التكذيب</div>
+<div class="info-card-desc">يبين خطورة التفريق بين الرسل أو تكذيب رسول واحد.</div>
+</div>
+</div>
+<div class="block-header">مدخل الباب</div>
+<div class="intro-text">الإيمان بالرسل أصل عظيم من أصول الدين؛ فقد اقتضت رحمة الله أن يرسل الرسل مبشرين ومنذرين حين اجتالت الشياطين البشر عن التوحيد، وجعلهم من جنس البشر لتتحقق القدوة والاتباع.</div>
+<div class="block-header">افهم بسرعة</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">⏳</div>
+<div class="info-card-title">10 قرون</div>
+<div class="info-card-desc">عاشت البشرية بعد آدم على التوحيد الخالص.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🚢</div>
+<div class="info-card-title">نوح عليه السلام</div>
+<div class="info-card-desc">أول رسول أُرسل بعد وقوع الانحراف والشرك.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🤝</div>
+<div class="info-card-title">بشر مثلنا</div>
+<div class="info-card-desc">يأكلون ويشربون ليكونوا قدوة عملية في مقدور البشر.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⚠️</div>
+<div class="info-card-title">تكذيب واحد</div>
+<div class="info-card-desc">تكذيب رسول واحد هو تكذيب لجميع الرسل ولله تعالى.</div>
+</div>
+</div>
+<div class="block-header">النص العلمي الكامل</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">بداية البشرية وتاريخ إرسال الرسل<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-result" data-label="الهبوط وبداية العهد">أنزل الله تعالى آدم عليه السلام من الجنة إلى الأرض، ليعمرها بالتوحيد والعبادة، قال تعالى: ﴿قُلْنَا اهْبِطُوا مِنْهَا جَمِيعًا فَإِمَّا يَأْتِيَنَّكُم مِّنِّي هُدًى فَمَن تَبِعَ هُدَايَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ﴾ [البقرة: 38].</p>
+<p class="edu-callout callout-rule" data-label="فترة الاستقامة والانحراف">ظلت البشرية بعد آدم عليه السلام <strong class="keyword-blue">عشرة قرون كاملة</strong> محافظة على عبادة الله وحده لا شريك له، حتى اجتالت الشياطين الناس فحرفتهم عن دينهم ووقع الشرك.</p>
+<p style="margin:0 0 14px;line-height:2">عند ذلك اقتضت حكمة الله ورحمته إرسال <strong class="keyword-green">نوح عليه السلام</strong>، وهو <span class="term-blue">أول رسول أرسل إلى أهل الأرض بعد الانحراف الأول</span>، ليرد الناس إلى عبادة الله ويبين لهم الشريعة، ثم تتابعت الرسل بعده تترا.</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">حكمة بشرية الرسل عليهم السلام<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p style="margin:0 0 14px;line-height:2">اقتضت حكمة الله عز وجل أن يكون الرسل من جنس البشر؛ يأكلون الطعام، ويمشون في الأسواق، ويتزوجون ويمرضون ويجوعون ويحزنون، وذلك لأن الإنسان بحاجة إلى <strong class="term-gold">نموذج عملي بشري</strong> يمكن التأسي به والاقتداء بأفعاله وتطبيق أوامره في حدود الطاقة البشرية.</p>
+<p class="verse-panel" style="margin:0 0 14px;line-height:2">قال الله تعالى: ﴿لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُوا اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا﴾ [الأحزاب: 21].<br/>وقال تعالى: ﴿أُوْلَبِكَ الَّذِينَ هَدَى اللَّهُ فَبِهُدَنَهُمُ اقْتَدِه﴾ [الأنعام: 90].</p>
+<div class="app-scenario edu-callout callout-example" data-label="توضيح">لو كان الرسول ملكاً لما استطاع البشر الاقتداء به؛ لعدم مجانسته لهم في الطبيعة والحاجات والقدرات.</div>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">حكم تكذيب الرسل وخطورة التفريق بينهم<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-rule" data-label="قاعدة عقدية كبرى">من كذّب رسولاً واحداً من رسل الله، فقد كذّب بالمرسِل (وهو الله سبحانه)، وكذّب بسائر الرسل جميعاً؛ لأن رسالتهم قائمة على أصل واحد، وتصديق بعضهم وتكذيب بعضهم مروق من الإيمان وكفر صريح.</p>
+<p class="verse-panel" style="margin:0 0 14px;line-height:2">قال تعالى: ﴿إِنَّ الَّذِينَ يَكْفُرُونَ بِاللَّهِ وَرُسُلِهِ وَيُرِيدُونَ أَن يُفَرِّقُوا بَيْنَ اللَّهِ وَرُسُلِهِ وَيَقُولُونَ نُؤْمِنُ بِبَعْضٍ وَنَكْفُرُ بِبَعْضٍ وَيُرِيدُونَ أَن يَتَّخِذُوا بَيْنَ ذَلِكَ سَبِيلًا ۝ أُوْلَبِكَ هُمُ الْكَافِرُونَ حَقًّا وَأَعْتَدْنَا لِلْكَافِرِينَ عَذَابًا مُّهِينًا﴾ [النساء: 150-151].</p>
+<p style="margin:0 0 14px;line-height:2">ولذلك نعت القرآن الكريم من كذب نبيه بأنه كذب جميع المرسلين: ﴿كَذَّبَتْ قَوْمُ نُوحِ الْمُرْسَلِينَ﴾ [الشعراء: 105]، و﴿كَذَّبَتْ عَادُ الْمُرْسَلِينَ﴾ [الشعراء: 123] مع أنهم كذبوا نبيهم وحده، لكن تكذيبه تكذيب لكل من جاء بالرسالة.</p>
+</div>
+</div>
+<div class="block-header">تطبيق عملي</div>
+<div class="app-scenario learning-flow">📌 تأمل الآية: ﴿كَذَّبَتْ قَوْمُ نُوحِ الْمُرْسَلِينَ﴾، واستنتج لماذا استعمل لفظ الجمع «المرسلين» مع أن نوحاً كان أول رسول إليهم.</div>
+<div class="block-header">ملخص الدرس (خريطة ذهنية)</div>
+<div class="tree-container">
+<div class="tree-root">منزلة وتاريخ الرسل</div>
+<div class="tree-branches">
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>عشرة قرون</h4>
+<p>استقامة على التوحيد بعد آدم</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>نوح عليه السلام</h4>
+<p>أول رسول بعد الانحراف</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>حكم التكذيب</h4>
+<p>تكذيب رسول = تكذيب للكل</p>
+</div>
+</div>
+</div>
+</div>
+<div class="block-header">أسئلة الفهم</div>
+<div class="ex-box" id="ex-1-1">
+<div class="ex-q">1. كم قرناً بقيت البشرية على التوحيد بعد هبوط آدم عليه السلام؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(1,1,this,true,'أحسنت! بقيت عشرة قرون على التوحيد الخالص.')">عشرة قرون</button>
+<button class="ex-btn" onclick="act(1,1,this,false,'غير صحيح، راجع مدخل الباب.')">قرن واحد</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-1-2">
+<div class="ex-q">2. من هو أول رسول أُرسل إلى أهل الأرض بعد وقوع الشرك؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(1,2,this,true,'صحيح، نوح عليه السلام هو أول رسول بعد الانحراف.')">نوح عليه السلام</button>
+<button class="ex-btn" onclick="act(1,2,this,false,'إجابة خاطئة.')">إبراهيم عليه السلام</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-1-3">
+<div class="ex-q">3. ما حكم من آمن بجميع الرسل وكذب بنبوة محمد ﷺ؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(1,3,this,true,'أحسنت، تكذيب رسول واحد كفر بالجميع وبمن أرسلهم.')">كافر بالجميع وبمن أرسلهم</button>
+<button class="ex-btn" onclick="act(1,3,this,false,'خطأ، راجع الآيات.')">مؤمن ناقص الإيمان</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-1-4">
+<div class="ex-q">4. صل المفاهيم بما يناسبها:</div>
+<div class="game-grid" id="game-1"></div>
+</div>
+<div class="progress-tracker">
+<span>التقدم في هذا الموضوع:</span>
+<div class="prog-dots" id="dots-1">
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+</div>
+</div>
+<div class="nav-row">
+<button class="nav-btn btn-outline" onclick="goSlide(0)">◁ السابق</button>
+<button class="nav-btn btn-navy" disabled="" id="next-1" onclick="goSlide(2)">التالي: حكمة إرسال الرسل ➜</button>
+</div>
+</div>
+<!-- ================= 2. الباب الثاني ================= -->
+<div class="scr" data-req="4" id="s-2">
+<div class="hero-banner">
+<div class="hero-icon">💡</div>
+<div class="hero-title">الباب الثاني: حكمة إرسال الرسل عليهم السلام</div>
+<div class="hero-sub">غايات البعثة ووظائف الرسل الأساسية في إصلاح البشرية</div>
+<div class="hero-line"></div>
+<div class="hero-tags">
+<div class="hero-tag">التوحيد</div>
+<div class="hero-tag">إقامة الحجة</div>
+<div class="hero-tag">بيان الغاية</div>
+<div class="hero-tag">المغيبات</div>
+<div class="hero-tag">تزكية النفوس</div>
+</div>
+</div>
+<div class="block-header">مخرجات التعلم</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">🌟</div>
+<div class="info-card-title">إفراد العبودية</div>
+<div class="info-card-desc">يدرك أثر الرسالة في تحرير العباد من عبادة المخلوق إلى الخالق.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⚖️</div>
+<div class="info-card-title">إقامة الحجة</div>
+<div class="info-card-desc">يستدل على قطع المعذرة عن الخلق بإرسال الرسل.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🌱</div>
+<div class="info-card-title">تزكية النفوس</div>
+<div class="info-card-desc">يوضح دور الرسل في تهذيب الأخلاق وتطهير القلوب.</div>
+</div>
+</div>
+<div class="block-header">مدخل الباب</div>
+<div class="intro-text">لم يترك الله البشر هملاً، بل اقتضت حكمته ورحمته إرسال الرسل لحكم جليلة وغايات عظيمة؛ تتصدرها عبادة الله وحده، وإقامة الحجة، وبيان تفاصيل الغيب، وإتمام مكارم الأخلاق.</div>
+<div class="block-header">افهم بسرعة</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">🕊️</div>
+<div class="info-card-title">حرية العبودية</div>
+<div class="info-card-desc">إخراج الناس من عبادة العباد إلى عبادة رب العباد.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🎯</div>
+<div class="info-card-title">غاية الوجود</div>
+<div class="info-card-desc">بيان الحكمة من خلق الإنس والجن وتفاصيل الشرائع.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">📜</div>
+<div class="info-card-title">قطع المعذرة</div>
+<div class="info-card-desc">لئلا يكون للناس على الله حجة بعد الرسل.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">💎</div>
+<div class="info-card-title">مكارم الأخلاق</div>
+<div class="info-card-desc">إصلاح النفوس وتزكيتها بالعلم النافع والعمل الصالح.</div>
+</div>
+</div>
+<div class="block-header">النص العلمي الكامل</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">الحكم الكبرى لإرسال الرسل (١ - ٣)<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-definition" data-label="الحكمة الأولى: التوحيد والحرية"><strong class="keyword-blue">1. إخراج العباد من عبادة العباد إلى عبادة رب العباد:</strong> ومن رق عبودية المخلوق وأهوائه إلى فضاء حرية عبادة الخالق وحده، قال تعالى: ﴿وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ﴾ [الأنبياء: 107].</p>
+<p class="edu-callout callout-definition" data-label="الحكمة الثانية: بيان الغاية"><strong class="keyword-blue">2. بيان الغاية من خلق البشر:</strong> وهي عبادة الله وتوحيده، ومعرفة ما يحبه الله ويرضاه؛ إذ لا يستقل العقل بمعرفة تفاصيل العبادات دون هداية الوحي، قال تعالى: ﴿وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَّسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ﴾ [النحل: 36].</p>
+<p class="edu-callout callout-definition" data-label="الحكمة الثالثة: إقامة الحجة"><strong class="keyword-blue">3. إقامة الحجة على البشر:</strong> وقطع المعذرة عنهم حتى لا يحتج أحد بجهله، قال تعالى: ﴿رُّسُلًا مُّبَشِّرِينَ وَمُنذِرِينَ لِئَلَّا يَكُونَ لِلنَّاسِ عَلَى اللَّهِ حُجَّةٌ بَعْدَ الرُّسُلِ وَكَانَ اللَّهُ عَزِيزًا حَكِيمًا﴾ [النساء: 165].</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">الحكم الكبرى لإرسال الرسل (٤ - ٦)<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">4. بيان المغيبات:</strong> تفصيل ما لا تدركه العقول المجردة من أسماء الله وصفاته والملائكة وأهوال اليوم الآخر والجنة والنار والقضاء والقدر.</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">5. الاقتداء بهديهم الكامل:</strong> لكمال أخلاقهم وعصمتهم وصبرهم، قال تعالى: ﴿لَقَدْ كَانَ لَكُمْ فِيهِمْ أُسْوَةٌ حَسَنَةٌ﴾ [الممتحنة: 6].</p>
+<p class="edu-callout callout-result" data-label="الحكمة السادسة: التزكية"><strong class="keyword-green">6. إصلاح النفوس وتزكيتها:</strong> وتطهيرها من الشبهات والشهوات؛ قال تعالى: ﴿يُزَكِّيهِمْ وَيُعَلِّمُهُمُ الْكِتَابَ وَالْحِكْمَةَ﴾ [الجمعة: 2]، وقال ﷺ: «إنما بعثت لأتمم مكارم الأخلاق» [الأدب المفرد (273)، مسند أحمد (8952)].</p>
+</div>
+</div>
+<div class="block-header">تطبيق عملي</div>
+<div class="app-scenario">📌 بين كيف يجمع حديث: «إنما بعثت لأتمم مكارم الأخلاق» بين تزكية النفس وبناء السلوك الإيماني الرشيد.</div>
+<div class="block-header">ملخص الدرس (خريطة ذهنية)</div>
+<div class="tree-container">
+<div class="tree-root">حِكَم إرسال الرسل</div>
+<div class="tree-branches">
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>إفراد العبادة</h4>
+<p>إخراج العباد من الشرك</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>إقامة الحجة</h4>
+<p>قطع المعذرة والتبشير</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>بيان الغيب والتزكية</h4>
+<p>القدوة ومكارم الأخلاق</p>
+</div>
+</div>
+</div>
+</div>
+<div class="block-header">أسئلة الفهم</div>
+<div class="ex-box" id="ex-2-1">
+<div class="ex-q">1. ما الغاية العظمى الأولى من بعثة جميع الرسل؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(2,1,this,true,'أحسنت، الدعوة إلى عبادة الله وحده واجتناب الطاغوت.')">الدعوة إلى توحيد الله وعبادته</button>
+<button class="ex-btn" onclick="act(2,1,this,false,'خطأ، راجع حِكَم الإرسال.')">جمع الأموال وبناء المدن</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-2-2">
+<div class="ex-q">2. ما دلالة قوله تعالى: ﴿لِئَلَّا يَكُونَ لِلنَّاسِ عَلَى اللَّهِ حُجَّةٌ بَعْدَ الرُّسُلِ﴾؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(2,2,this,true,'صحيح، إقامة الحجة وقطع المعذرة.')">إقامة الحجة وقطع المعذرة عن البشر</button>
+<button class="ex-btn" onclick="act(2,2,this,false,'غير صحيح.')">ترك الناس دون توجيه</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-2-3">
+<div class="ex-q">3. هل يستقل العقل بمعرفة تفاصيل صفات الله وأهوال اليوم الآخر؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(2,3,this,true,'أحسنت، تفاصيل الغيب لا تعرف إلا بوحي الرسل.')">لا، بل يحتاج إلى بيان الرسل</button>
+<button class="ex-btn" onclick="act(2,3,this,false,'خطأ، العقل وحده لا يدرك تفاصيل الغيب.')">نعم يستقل بها تماماً</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-2-4">
+<div class="ex-q">4. صل المفاهيم بما يناسبها:</div>
+<div class="game-grid" id="game-2"></div>
+</div>
+<div class="progress-tracker">
+<span>التقدم في هذا الموضوع:</span>
+<div class="prog-dots" id="dots-2">
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+</div>
+</div>
+<div class="nav-row">
+<button class="nav-btn btn-outline" onclick="goSlide(1)">◁ السابق</button>
+<button class="nav-btn btn-navy" disabled="" id="next-2" onclick="goSlide(3)">التالي: مقتضيات الإيمان بالرسل ➜</button>
+</div>
+</div>
+<!-- ================= 3. الباب الثالث ================= -->
+<div class="scr" data-req="4" id="s-3">
+<div class="hero-banner">
+<div class="hero-icon">📖</div>
+<div class="hero-title">الباب الثالث: ما يتضمنه الإيمان بالرسل (الأمور الثمانية)</div>
+<div class="hero-sub">الأصول العقدية الثمانية الواجب اعتقادها في حق المرسلين</div>
+<div class="hero-line"></div>
+<div class="hero-tags">
+<div class="hero-tag">النبوة وهبية</div>
+<div class="hero-tag">عموم الرسالة</div>
+<div class="hero-tag">بشرية الرسل</div>
+<div class="hero-tag">25 نبياً</div>
+<div class="hero-tag">أولو العزم</div>
+<div class="hero-tag">وحدة الدين</div>
+<div class="hero-tag">العصمة</div>
+</div>
+</div>
+<div class="block-header">مخرجات التعلم</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">🎁</div>
+<div class="info-card-title">الهبة والاصطفاء</div>
+<div class="info-card-desc">يعلم أن النبوة اختيار إلهي لا تُنال بالاكتساب والرياضة.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🌍</div>
+<div class="info-card-title">عموم الرسالة الخاتمة</div>
+<div class="info-card-desc">يستدل على شمول نبوة محمد ﷺ لكافة الثقلين ونسخها لما قبلها.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🛡️</div>
+<div class="info-card-title">العصمة وبشرية الرسل</div>
+<div class="info-card-desc">يضبط مفهوم العصمة وينفي علم الغيب الذاتي عن الرسل.</div>
+</div>
+</div>
+<div class="block-header">مدخل الباب</div>
+<div class="intro-text">يتضمن الإيمان بالرسل ثمانية أصول كبرى تشمل الإقرار باصطفائهم، والإيمان بجميعهم، وعموم رسالة خاتمهم، وبشريتهم، وتفاضلهم، ووحدة دينهم، وعصمتهم المطلقة في التبليغ ومن الكبائر.</div>
+<div class="block-header">افهم بسرعة</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">✨</div>
+<div class="info-card-title">وهبية اصطفائية</div>
+<div class="info-card-desc">النبوة فضل من الله وليست مهارة مكتسبة.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🌐</div>
+<div class="info-card-title">لكافة الثقلين</div>
+<div class="info-card-desc">رسالة محمد ﷺ عامة للإنس والجن وناسخة لكل الشرائع.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🔢</div>
+<div class="info-card-title">25 نبياً مسمّى</div>
+<div class="info-card-desc">18 في سورة الأنعام و7 في مواضع متفرقة، وأفضلهم أولو العزم.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🤝</div>
+<div class="info-card-title">إخوة لعلّات</div>
+<div class="info-card-desc">دينهم واحد وهو التوحيد والإسلام، وشرائعهم متنوعة.</div>
+</div>
+</div>
+<div class="block-header">النص العلمي الكامل</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">الأمور الأربعة الأولى (الاصطفاء، العموم، البشرية، علم الغيب)<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-rule" data-label="1. النبوة هبة واصطفاء"><strong class="keyword-blue">1. النبوة اصطفاء وهبة:</strong> الإيمان بأنها واسطة في تبليغ الشرع، تُوهب من الله ولا تُكتسب بالطاعات والرياضة النفسية، قال تعالى: ﴿اللَّهُ يَصْطَفِي مِنَ الْمَلَائِكَةِ رُسُلًا وَمِنَ النَّاسِ﴾ [الحج: 75]، وقال تعالى: ﴿اللَّهُ أَعْلَمُ حَيْثُ يَجْعَلُ رِسَالَتَهُ﴾ [الأنعام: 124].</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-blue">2. الإيمان بجميع الرسل السابقين:</strong> والتصديق بأنهم بلغوا البلاغ المبين، والإيمان بمن سُمي لنا ومن لم يُسمَّ، قال تعالى: ﴿لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّنْهُمْ وَنَحْنُ لَهُ مُسْلِمُونَ﴾ [البقرة: 136].</p>
+<p class="edu-callout callout-rule" data-label="3. عموم رسالة النبي الخاتم"><strong class="keyword-blue">3. عموم رسالة محمد ﷺ ونسخها للشرائع:</strong> أُرسل للثقلين كافة (الإنس والجن)، ومن كفر به فهو كافر ولو آمن بمن قبله، قال تعالى: ﴿قُلْ يَأَيُّهَا النَّاسُ إِنِّي رَسُولُ اللَّهِ إِلَيْكُمْ جَمِيعًا﴾ [الأعراف: 158]، وقال ﷺ: «والذي نفسُ محمد بيده، لا يسمعُ بي أحدٌ من هذه الأمة: يهودي، ولا نصراني، ثم يموت، ولم يؤمن بالذي أرسلتُ به؛ إلا كان من أصحاب النار» [صحيح مسلم (384)].</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-blue">4. بشرية الرسل وعدم علمهم الغيب:</strong> الرسل بشر لا يعلمون الغيب إلا ما أطلعهم الله عليه، قال تعالى: ﴿عَلِمُ الْغَيْبِ فَلَا يُظْهِرُ عَلَى غَيْبِهِ أَحَدًا ۝ إِلَّا مَنِ ارْتَضَى مِن رَّسُولٍ﴾ [الجن: 26-27]؛ لأن الغيب من خصائص الربوبية، وهم بشر يمرضون ويموتون، قال تعالى: ﴿وَمَا أَرْسَلْنَا قَبْلَكَ مِنَ الْمُرْسَلِينَ إِلَّا إِنَّهُمْ لَيَأْكُلُونَ الطَّعَامَ وَيَمْشُونَ فِي الْأَسْوَاقِ﴾ [الفرقان: 20].</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">الأمور الأربعة الثانية (الأسماء، الوظائف، وحدة الدين، العصمة)<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-result" data-label="5. أسماء الرسل والتفاضل"><strong class="keyword-green">5. الإيمان بأسماء الرسل وتفاضلهم:</strong> سُمي في القرآن 25 نبياً ورسولاً (18 في سورة الأنعام، و7 في مواضع متفرقة: آدم، هود، صالح، شعيب، إدريس، ذو الكفل، محمد عليهم الصلاة والسلام)، ونؤمن بالباقين إجمالاً: ﴿وَرُسُلًا لَّمْ نَقْصُصْهُمْ عَلَيْكَ﴾. وأفضلهم <span class="term-gold">أولو العزم الخمسة: (محمد ﷺ، نوح، إبراهيم، موسى، عيسى)</span>، وسيدهم وأفضلهم نبينا محمد ﷺ.</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">6. الإيمان بوظائف الرسل:</strong> تبليغ الشريعة، وبيان الوحي، ودلالة الأمة على الخير والتحذير من الشر، والتبشير والإنذار.</p>
+<p class="edu-callout callout-rule" data-label="7. وحدة دين الأنبياء"><strong class="keyword-green">7. وحدة دين الأنبياء:</strong> دين جميع الأنبياء واحد وهو الإسلام (التوحيد والعبادة لله وحده)، وإن اختلفت شرائعهم الفرعية، قال ﷺ: «الأنبياء إخوة لعلات أمهاتهم شتى ودينهم واحد» [البخاري (3443)، مسلم (2364)].</p>
+<p class="edu-callout callout-rule" data-label="8. عصمة الأنبياء"><strong class="keyword-green">8. عصمة الأنبياء:</strong> معصومون من الكبائر وفيما يبلغونه عن الله باتفاق الأمة، وإذا وقعت منهم بعض الصغائر التي لا صلة لها بالتبليغ نُبهوا عليها وسرعان ما يتوبون، فيكون حالهم بعد التوبة أعظم، كما في قصة آدم عليه السلام: ﴿وَعَصَى ءَادَمُ رَبَّهُ فَغَوَى ۝ ثُمَّ اجْتَبَهُ رَبُّهُ فَتَابَ عَلَيْهِ وَهَدَى﴾ [طه: 121-122].</p>
+</div>
+</div>
+<div class="block-header">تطبيق عملي</div>
+<div class="app-scenario">📌 صنف الرسل الآتين إلى (المذكورين في سورة الأنعام) أو (المذكورين في مواضع أخرى): يوسف، هود، داود، صالح، اليسع، شعيب.</div>
+<div class="block-header">ملخص الدرس (خريطة ذهنية)</div>
+<div class="tree-container">
+<div class="tree-root">مقتضيات الإيمان بالرسل</div>
+<div class="tree-branches">
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>النبوة والعموم</h4>
+<p>هبة ربانية، ورسالة محمد ﷺ عامة</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>العدد والفضل</h4>
+<p>25 مسمى، وأولو العزم خمسة</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>الدين والعصمة</h4>
+<p>الدين واحد (إخوة لعلات) ومعصومون</p>
+</div>
+</div>
+</div>
+</div>
+<div class="block-header">أسئلة الفهم</div>
+<div class="ex-box" id="ex-3-1">
+<div class="ex-q">1. كم عدد الأنبياء والرسل المذكورين صراحة بالاسم في القرآن الكريم؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(3,1,this,true,'أحسنت، 25 نبياً ورسولاً.')">25 نبياً ورسولاً</button>
+<button class="ex-btn" onclick="act(3,1,this,false,'راجع مقتضيات الإيمان.')">12 نبياً</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-3-2">
+<div class="ex-q">2. ما المراد بحديث: «الأنبياء إخوة لعلات»؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(3,2,this,true,'صحيح، دينهم وعقيدتهم واحدة وشرائعهم متنوعة.')">دينهم التوحيد واحد وشرائعهم متنوعة</button>
+<button class="ex-btn" onclick="act(3,2,this,false,'خطأ.')">مختلفون في أصل العقيدة والتوحيد</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-3-3">
+<div class="ex-q">3. هل يعلم الرسل عليهم السلام الغيب استقلالاً وبذواتهم؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(3,3,this,true,'أحسنت، الغيب من خصائص الله ولا يعلمون إلا ما أطلعهم الله عليه.')">لا يعلمون إلا ما أطلعهم الله عليه</button>
+<button class="ex-btn" onclick="act(3,3,this,false,'خطأ، علم الغيب المطلق لله وحده.')">نعم يعلمون كل الغيب بذواتهم</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-3-4">
+<div class="ex-q">4. صل المفاهيم بما يناسبها:</div>
+<div class="game-grid" id="game-3"></div>
+</div>
+<div class="progress-tracker">
+<span>التقدم في هذا الموضوع:</span>
+<div class="prog-dots" id="dots-3">
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+</div>
+</div>
+<div class="nav-row">
+<button class="nav-btn btn-outline" onclick="goSlide(2)">◁ السابق</button>
+<button class="nav-btn btn-navy" disabled="" id="next-3" onclick="goSlide(4)">التالي: دلائل النبوة ➜</button>
+</div>
+</div>
+<!-- ================= 4. الباب الرابع ================= -->
+<div class="scr" data-req="4" id="s-4">
+<div class="hero-banner">
+<div class="hero-icon">✨</div>
+<div class="hero-title">الباب الرابع: دلائل نبوة محمد ﷺ</div>
+<div class="hero-sub">البراهين الساطعة والمعجزات الباهرة والشواهد التاريخية الدالة على صدقه</div>
+<div class="hero-line"></div>
+<div class="hero-tags">
+<div class="hero-tag">المعجزة</div>
+<div class="hero-tag">القرآن الكريم</div>
+<div class="hero-tag">حوار هرقل</div>
+<div class="hero-tag">الصدق والأمانة</div>
+<div class="hero-tag">تزايد الأتباع</div>
+</div>
+</div>
+<div class="block-header">مخرجات التعلم</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">📖</div>
+<div class="info-card-title">دلالة المعجزات</div>
+<div class="info-card-desc">يميز بين المعجزة الخالدة (القرآن) والمعجزات الحسية الوقتية.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">👑</div>
+<div class="info-card-title">استدلال هرقل</div>
+<div class="info-card-desc">يحلل الأسئلة العشرة التي استنتج منها ملك الروم صدق النبي ﷺ.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">📈</div>
+<div class="info-card-title">شواهد السيرة والواقع</div>
+<div class="info-card-desc">يستدل بأحواله قبل البعثة وشهادة أعدائه وتنامي انتشار دينه.</div>
+</div>
+</div>
+<div class="block-header">مدخل الباب</div>
+<div class="intro-text">أيد الله نبيه محمداً ﷺ ببراهين قاطعة جمعت بين المعجزات الخارقة للعادة، ودلائل سيرته وأخلاقه وسماته الشريفة، والتي قادت المنصفين من الملوك والعلماء كهرقل وعبد الله بن سلام للإقرار بصدقه.</div>
+<div class="block-header">افهم بسرعة</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">📗</div>
+<div class="info-card-title">القرآن الكريم</div>
+<div class="info-card-desc">المعجزة العظمى الباقية المحفوظة بحفظ الله.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🌙</div>
+<div class="info-card-title">انشقاق القمر</div>
+<div class="info-card-desc">من الآيات الحسية الباهرة المشهودة بمكة.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🔍</div>
+<div class="info-card-title">فراسة هرقل</div>
+<div class="info-card-desc">سأل أبا سفيان 10 أسئلة واستنتج صدق نبوته بيقين.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⌛</div>
+<div class="info-card-title">40 سنة صدق</div>
+<div class="info-card-desc">لبث في قومه عمراً لم يجربوا عليه كذباً قط.</div>
+</div>
+</div>
+<div class="block-header">النص العلمي الكامل</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">دلالة المعجزات الباهرة<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-definition" data-label="تعريف المعجزة"><strong class="keyword-blue">المعجزة:</strong> أمر خارق للعادة خارج عن مقدور الثقلين (الإنس والجن) يظهره الله تأييداً لنبيه وتحدياً للمكذبين.</p>
+<p style="margin:0 0 14px;line-height:2">أعظم معجزات النبي ﷺ هي <strong class="term-gold">القرآن الكريم</strong>، فهو المعجزة البيانية العقلية الخالدة المحفوظة بحفظ الله إلى قيام الساعة، إلى جانب المعجزات الحسية كانشقاق القمر، ونبع الماء من بين أصابعه، وحنين الجذع.</p>
+<p class="verse-panel" style="margin:0 0 14px;line-height:2">قال ﷺ: «ما من نبي من الأنبياء إلا وقد أوتي من الآيات ما آمن على مثله البشر، وإنما كان الذي أوتيته وحياً أوحاه الله إليّ، فأرجو أن أكون أكثرهم تابعاً يوم القيامة» [البخاري (4981)، مسلم (152)].</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">دلالة أحوال النبي ﷺ واستدلال هرقل<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p style="margin:0 0 14px;line-height:2">استدل المنصفون بصدق النبي ﷺ من خلال النظر في سيرته وأخلاقه وسماته. ومن أشهر الشواهد التاريخية <strong class="keyword-blue">حوار هرقل ملك الروم مع أبي سفيان بن حرب</strong> حين سأله 10 أسئلة دقيقة:</p>
+<ul class="num-list">
+<li>سأل عن نسبه (فكان في ذروة النسب الشريف).</li>
+<li>هل قال هذا القول أحد قبله أو كان من آبائه ملك؟ (قال: لا، فانتفى طلب الملك).</li>
+<li>هل يتبعه الأشراف أم الضعفاء؟ (قال: بل ضعفاؤهم، وهم أتباع الرسل).</li>
+<li>أيزيدون أم ينقصون؟ (قال: يزيدون، وذلك شأن الإيمان حتى يتم).</li>
+<li>هل يرتد أحد منهم سخطة لدينه؟ (قال: لا، لأن الإيمان إذا خالط بشاشة القلوب ثبت).</li>
+<li>هل كنتم تتهمونه بالكذب قبل أن يقول ما قال؟ (قال: لا، فعلم أنه يستحيل أن يدع الكذب على الناس ويكذب على الله).</li>
+<li>هل يغدر؟ وبماذا يأمر؟ (قال: لا يغدر، ويأمر بالصلاة والصدق والعفاف والصلة).</li>
+</ul>
+<p class="edu-callout callout-result" data-label="نتيجة استدلال هرقل">فقال هرقل حينئذٍ: «فإن كان ما تقول حقاً فسيملك موضع قدمي هاتين... ولو كنت عنده لغسلت عن قدمه» [صحيح البخاري (7)، صحيح مسلم (1773)].</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">شواهد إضافية من واقع حاله الشريف ﷺ<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">1. عدم سعيه للنبوة ولبوثه 40 سنة:</strong> لم يكن متطلعاً لمنصب أو قارئاً لكتاب، قال تعالى: ﴿فَقَدْ لَبِثْتُ فِيكُمْ عُمُرًا مِّن قَبْلِهِ أَفَلَا تَعْقِلُونَ﴾ [يونس: 16].</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">2. شهادة قومه له بالأمانة:</strong> حين صعد الصفا ونادى قريشاً، قالوا: «ما جربنا عليك كذباً» [البخاري (4770)].</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">3. دلالة سماته وظاهره:</strong> كقول حبر اليهود عبد الله بن سلام ؓ حين رآه بالمدينة: «فلما تبينت وجهه عرفت أن وجهه ليس بوجه كذاب» [سنن الترمذي (2487)].</p>
+<p class="edu-callout callout-result" data-label="4. استمرار تزايد أتباعه">استمرار انتشار الإسلام ودخوله كافة بقاع الأرض دون انحسار، وهو ما تشهد به الدراسات المعاصرة بأن الإسلام أسرع الأديان نمواً في العالم.</p>
+</div>
+</div>
+<div class="block-header">تطبيق عملي</div>
+<div class="app-scenario">📌 استنبط من حوار هرقل قاعدة عقلية في الحكم على صدق الدعاة والمصلحين من خلال تاريخهم الأخلاقي.</div>
+<div class="block-header">ملخص الدرس (خريطة ذهنية)</div>
+<div class="tree-container">
+<div class="tree-root">دلائل صدق نبوة محمد ﷺ</div>
+<div class="tree-branches">
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>المعجزات</h4>
+<p>القرآن العظيم وانشقاق القمر</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>استدلال هرقل</h4>
+<p>عشرة أسئلة كشفت صدقه</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>أحواله وسماته</h4>
+<p>40 سنة صدق وتزايد الأتباع</p>
+</div>
+</div>
+</div>
+</div>
+<div class="block-header">أسئلة الفهم</div>
+<div class="ex-box" id="ex-4-1">
+<div class="ex-q">1. ما المعجزة العظمى الخالدة لنبينا محمد ﷺ؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(4,1,this,true,'أحسنت، القرآن الكريم المحفوظ بحفظ الله.')">القرآن الكريم</button>
+<button class="ex-btn" onclick="act(4,1,this,false,'خطأ، المعجزة الخالدة هي القرآن.')">انشقاق القمر وحده</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-4-2">
+<div class="ex-q">2. ماذا استنتج هرقل من إجابة أبي سفيان بأن أتباع النبي ﷺ يزيدون ولا يرتدون؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(4,2,this,true,'صحيح، أن الإيمان إذا خالط بشاشة القلوب ثبت.')">أن بشاشة الإيمان إذا خالطت القلوب ثبتت</button>
+<button class="ex-btn" onclick="act(4,2,this,false,'إجابة خاطئة.')">أنهم يتبعونه لأجل المال</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-4-3">
+<div class="ex-q">3. ماذا قال عبد الله بن سلام ؓ حين رأى وجه النبي ﷺ أول مرة؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(4,3,this,true,'أحسنت، عرف بملامحه الشريفة صدقه.')">«عرفت أن وجهه ليس بوجه كذاب»</button>
+<button class="ex-btn" onclick="act(4,3,this,false,'خطأ.')">طلب منه معجزة حسية</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-4-4">
+<div class="ex-q">4. صل المفاهيم بما يناسبها:</div>
+<div class="game-grid" id="game-4"></div>
+</div>
+<div class="progress-tracker">
+<span>التقدم في هذا الموضوع:</span>
+<div class="prog-dots" id="dots-4">
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+</div>
+</div>
+<div class="nav-row">
+<button class="nav-btn btn-outline" onclick="goSlide(3)">◁ السابق</button>
+<button class="nav-btn btn-navy" disabled="" id="next-4" onclick="goSlide(5)">التالي: حقوق النبي ﷺ ➜</button>
+</div>
+</div>
+<!-- ================= 5. الباب الخامس ================= -->
+<div class="scr" data-req="4" id="s-5">
+<div class="hero-banner">
+<div class="hero-icon">❤️</div>
+<div class="hero-title">الباب الخامس: حقوق النبي محمد ﷺ</div>
+<div class="hero-sub">الواجبات الشرعية لأمته نحوه بين الاتباع والتعظيم والحذر من البدع والغلو</div>
+<div class="hero-line"></div>
+<div class="hero-tags">
+<div class="hero-tag">التصديق والطاعة</div>
+<div class="hero-tag">المحبة والتوقير</div>
+<div class="hero-tag">الصلاة عليه</div>
+<div class="hero-tag">الآل والصحب</div>
+<div class="hero-tag">تجنب البدع</div>
+<div class="hero-tag">التحذير من الغلو</div>
+</div>
+</div>
+<div class="block-header">مخرجات التعلم</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">🎯</div>
+<div class="info-card-title">الطاعة والاتباع</div>
+<div class="info-card-desc">يوجب طاعة النبي ﷺ وتحكيم سنته واجتناب الابتداع في الدين.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🤲</div>
+<div class="info-card-title">التوقير والصلاة</div>
+<div class="info-card-desc">يبين فضل الصلاة عليه وتوقيره حياً وميتاً ومحبة أصحابه وآله.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🛡️</div>
+<div class="info-card-title">تجنب الغلو</div>
+<div class="info-card-desc">يميز بين المحبة الشرعية والغلو الشركي كدعائه والاستغاثة به.</div>
+</div>
+</div>
+<div class="block-header">مدخل الباب</div>
+<div class="intro-text">حقوق النبي ﷺ على أمته تجمع بين التصديق الجازم، والطاعة المطلقة لأوامره، وتقديم محبته على النفس والمال، وتوقيره ونصرة سنته وموالاة أصحابه، مع الحذر التام من الغلو وصرف العبادة له.</div>
+<div class="block-header">افهم بسرعة</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">👑</div>
+<div class="info-card-title">طاعة وتصديق</div>
+<div class="info-card-desc">طاعته فيما أمر وتصديقه فيما أخبر واجتناب ما نهى.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">💖</div>
+<div class="info-card-title">أحب إلينا</div>
+<div class="info-card-desc">تقديم محبته على الوالد والولد والناس أجمعين.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🕌</div>
+<div class="info-card-title">الصلاة عليه</div>
+<div class="info-card-desc">من صلى عليه صلاة صلى الله عليه بها عشراً.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⛔</div>
+<div class="info-card-title">لا تطروني</div>
+<div class="info-card-desc">الحذر من الغلو بصرف شيء من العبادات له كالدعاء والنذر.</div>
+</div>
+</div>
+<div class="block-header">النص العلمي الكامل</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">الحقوق الأربعة الأولى (التصديق، المحبة، السيرة، الصلاة)<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-rule" data-label="1. التصديق والطاعة"><strong class="keyword-blue">1. التصديق والإقرار وطاعته:</strong> فيما أمر، واجتناب ما عنه نهى وزجر، وأن لا يُعبد الله إلا بما شرع.</p>
+<p class="edu-callout callout-rule" data-label="2. المحبة والتعظيم"><strong class="keyword-blue">2. محبته وتعظيمه وتوقيره:</strong> وتقديم محبته على النفس والمال والولد؛ قال ﷺ: «لا يؤمن أحدكم حتى أكون أحب إليه من ولده ووالده والناس أجمعين» [البخاري (15)، مسلم (44)].</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-blue">3. معرفة سيرته الشريفة:</strong> ودراسة أخلاقه وشمائله وغزواته من كتب السنة المعتمدة.</p>
+<p class="edu-callout callout-result" data-label="4. الصلاة والتسليم عليه"><strong class="keyword-blue">4. الصلاة والتسليم عليه:</strong> والإكثار منها في المواطن المشروعة؛ لقوله ﷺ: «من صلى عليّ صلاة صلى الله عليه بها عشراً» [صحيح مسلم (384)].</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">الحقوق الأربعة الثانية (التوقير، الآل والصحب، ترك البدع، التحذير من الغلو)<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">5. احترامه وتوقيره حياً وميتاً:</strong> بعدم رفع الصوت عند قبره، وتعظيم أحاديثه وسنته، لقوله تعالى: ﴿لَا تَرْفَعُوا أَصْوَاتَكُمْ فَوْقَ صَوْتِ النَّبِيِّ﴾ [الحجرات: 2].</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">6. محبة أصحابه وآل بيته وأزواجه وموالاتهم:</strong> والكف عما شجر بينهم والحذر من سبهم؛ لقوله ﷺ: «لا تسبوا أصحابي» [البخاري (3673)، مسلم (2540)].</p>
+<p class="edu-callout callout-rule" data-label="7. تجنب الابتداع في الدين"><strong class="keyword-green">7. عدم ابتداع طريقة في الدين:</strong> والالتزام بما جاء به دون زيادة أو نقصان؛ لقوله ﷺ: «من أحدث في أمرنا هذا ما ليس منه فهو رد» [البخاري (2697)، مسلم (1718)].</p>
+<p class="edu-callout callout-rule" data-label="8. تجنب الغلو الشركي"><strong class="keyword-green">8. تجنب الغلو فيه:</strong> وعدم صرف شيء من خصائص الربوبية أو العبادة له كالدعاء، والاستغاثة به، أو الطواف بقبره، أو النذر والذبح له؛ لقوله ﷺ: «لا تطروني كما أطرت النصارى ابن مريم، فإنما أنا عبده، فقولوا: عبد الله ورسوله» [صحيح البخاري (3445)].</p>
+</div>
+</div>
+<div class="block-header">تطبيق عملي</div>
+<div class="app-scenario">📌 فرق بين التعظيم المشروع للنبي ﷺ (بالصلاة عليه واتباع سنته) والغلو الممنوع (كدعائه وطلب الشفاء منه).</div>
+<div class="block-header">ملخص الدرس (خريطة ذهنية)</div>
+<div class="tree-container">
+<div class="tree-root">حقوق النبي محمد ﷺ</div>
+<div class="tree-branches">
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>الطاعة والمحبة</h4>
+<p>التصديق وتقديم محبته على الكل</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>التوقير والصلاة</h4>
+<p>الصلاة عليه وموالاة الصحب والآل</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>الاتباع ونفي الغلو</h4>
+<p>ترك البدع وعدم صرف العبادة له</p>
+</div>
+</div>
+</div>
+</div>
+<div class="block-header">أسئلة الفهم</div>
+<div class="ex-box" id="ex-5-1">
+<div class="ex-q">1. ما جزاء من صلى على النبي ﷺ صلاة واحدة؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(5,1,this,true,'أحسنت، صلى الله عليه بها عشراً.')">صلى الله عليه بها عشراً</button>
+<button class="ex-btn" onclick="act(5,1,this,false,'راجع نصوص الأحاديث.')">صلى الله عليه بها صلاة واحدة</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-5-2">
+<div class="ex-q">2. ما حكم الاستغاثة بالنبي ﷺ وطلب تفريج الكرب منه عند قبره؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(5,2,this,true,'صحيح، هذا غلو شركي، فالدعاء عبادة لله وحده.')">غلو شركي منهي عنه</button>
+<button class="ex-btn" onclick="act(5,2,this,false,'خطأ، الدعاء حق خالص لله.')">مستحب لتعظيمه</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-5-3">
+<div class="ex-q">3. ما موقف المسلم من صحابة النبي ﷺ وأهل بيته؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(5,3,this,true,'أحسنت، محبة الجميع وموالاتهم وعدم سبهم.')">محبتهم جميعاً وموالاتهم وعدم سبهم</button>
+<button class="ex-btn" onclick="act(5,3,this,false,'خطأ.')">تفضيل بعضهم مع سب الباقين</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-5-4">
+<div class="ex-q">4. صل المفاهيم بما يناسبها:</div>
+<div class="game-grid" id="game-5"></div>
+</div>
+<div class="progress-tracker">
+<span>التقدم في هذا الموضوع:</span>
+<div class="prog-dots" id="dots-5">
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+</div>
+</div>
+<div class="nav-row">
+<button class="nav-btn btn-outline" onclick="goSlide(4)">◁ السابق</button>
+<button class="nav-btn btn-navy" disabled="" id="next-5" onclick="goSlide(6)">التالي: ثمرات الإيمان والخلاصات ➜</button>
+</div>
+</div>
+<!-- ================= 6. الباب السادس ================= -->
+<div class="scr" data-req="4" id="s-6">
+<div class="hero-banner">
+<div class="hero-icon">🏆</div>
+<div class="hero-title">الباب السادس: ثمرات الإيمان بالرسل والخلاصات العقدية</div>
+<div class="hero-sub">الآثار الإيمانية والسلوكية والمقارنات الفاصلة وخلاصة المحاضرة</div>
+<div class="hero-line"></div>
+<div class="hero-tags">
+<div class="hero-tag">رحمة الله</div>
+<div class="hero-tag">محبة الرسل</div>
+<div class="hero-tag">الهبة والاكتساب</div>
+<div class="hero-tag">أصل الدين</div>
+<div class="hero-tag">العصمة التامة</div>
+</div>
+</div>
+<div class="block-header">مخرجات التعلم</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">🌿</div>
+<div class="info-card-title">استشعار الرحمة</div>
+<div class="info-card-desc">يستشعر رحمة الله وعنايته بعباده بعدم تركهم لعقولهم القاصرة.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⚖️</div>
+<div class="info-card-title">الفروق العقدية</div>
+<div class="info-card-desc">يقارن بين الهبة والكسب، وبين التوحيد وفروع الشرائع.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🎯</div>
+<div class="info-card-title">الخلاصة الكلية</div>
+<div class="info-card-desc">يلخص النتائج والمفاهيم الكبرى لمحاضرة الإيمان بالرسل.</div>
+</div>
+</div>
+<div class="block-header">مدخل الباب</div>
+<div class="intro-text">تثمر المعرفة الصحيحة بالرسل استشعاراً لعظيم رحمة الله، ومحبةً عميقة لأنبيائه الكرام، وفهماً منضبطاً لضوابط الهبة الإلهية والعصمة، وتطبيقاً عملياً للاقتداء بالسنة في سائر شؤون الحياة.</div>
+<div class="block-header">افهم بسرعة</div>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon">💚</div>
+<div class="info-card-title">رحمة بالغة</div>
+<div class="info-card-desc">أن لم يكلنا الله إلى عقولنا القاصرة لمعرفة طريق الجنة.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🌟</div>
+<div class="info-card-title">ثناء ومحبة</div>
+<div class="info-card-desc">محبة الرسل والثناء عليهم لما قدموه من صبر وبلاغ مبين.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">⚖️</div>
+<div class="info-card-title">دين واحد</div>
+<div class="info-card-desc">العقيدة وأصل الدين ثابت لا يتبدل، والأحكام تختلف بالحكمة.</div>
+</div>
+<div class="info-card">
+<div class="info-card-icon">🛡️</div>
+<div class="info-card-title">عصمة التبليغ</div>
+<div class="info-card-desc">معصومون تماماً في الوحي والكبائر، ولا يقرون على صغائر.</div>
+</div>
+</div>
+<div class="block-header">النص العلمي الكامل</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">ثمرات الإيمان بالرسل في حياة المسلم<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p class="edu-callout callout-result" data-label="1. العلم برحمة الله"><strong class="keyword-blue">1. العلم برحمة الله وعنايته الفائقة بعباده:</strong> حيث لم يكلهم إلى عقولهم المحدودة القاصرة لمعرفة التوحيد وتفاصيل العبادة وطريق النجاة في الآخرة، بل أرسل إليهم هداة مهتدين يوضحون لهم الطريق.</p>
+<p class="edu-callout callout-result" data-label="2. محبة الرسل وتعظيمهم"><strong class="keyword-blue">2. محبة الرسل وتعظيمهم والثناء عليهم:</strong> لما قاموا به من الصبر العظيم وتبليغ الرسالة والنصح التام للأمم، والحرص على هدايتهم ونجاتهم.</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">المقارنات العقدية الفاصلة<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">المقارنة الأولى: النبوة بين الهبة الإلهية والاكتساب البشري:</strong> عقيدة أهل السنة أن النبوة اصطفاء محض وهبة من الله: ﴿اللَّهُ أَعْلَمُ حَيْثُ يَجْعَلُ رِسَالَتَهُ﴾، والزعم بأنها تنال برياضة النفس أو كثرة الطاعات باطل وضلال.</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">المقارنة الثانية: أصل الدين والشرائع الفرعية:</strong> أصل الدين واحد عند جميع الأنبياء وهو التوحيد والإسلام الخالص لله، أما الشرائع والأحكام العملية فتتنوع وتختلف وتنسخ بحسب الزمان والأمة: «دينهم واحد وأمهاتهم شتى».</p>
+<p style="margin:0 0 14px;line-height:2"><strong class="keyword-green">المقارنة الثالثة: عصمة الأنبياء:</strong> معصومون إجماعاً في التبليغ ومن الكبائر، والصغائر غير المتعلقة بالتبليغ قد تقع منهم لكنهم لا يُقرون عليها، بل ينبههم الله فوراً فيتوبون وتكون درجتهم بعد التوبة أعلى.</p>
+</div>
+</div>
+<div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion-header">الخلاصات العلمية المركزة للمحاضرة<span class="accordion-icon">+</span></div>
+<div class="accordion-body">
+<ul class="num-list">
+<li>النبوة واسطة في تبليغ دين الله، وهي اصطفاء رباني محض وليست مهارة مكتسبة.</li>
+<li>الإيمان بالرسل يقتضي الإيمان بجميع من سمى الله ومن لم يسم، وتكذيب رسول واحد كتكذيب سائر الرسل وتكذيب للمرسِل سبحانه.</li>
+<li>محمد ﷺ خاتم الأنبياء وأفضلهم ورسالته عامة للثقلين وناسخة لما قبلها، ومن لم يؤمن به فهو كافر لا يقبل منه دين.</li>
+<li>الرسل بشر لا يعلمون من الغيب إلا ما أطلعهم الله عليه لحاجة الرسالة، وهم معصومون في التبليغ ومن الكبائر.</li>
+<li>تنوعت دلائل صدق النبي ﷺ بين المعجزات الباهرة كالقرآن الكريم، وأحواله الشريفة وصفاته وأخلاقه، وتزايد أتباعه.</li>
+<li>حق النبي ﷺ يجمع بين المحبة التامة والاتباع المحكم وتجنب البدع والغلو الشركي بصرف العبادة له.</li>
+</ul>
+</div>
+</div>
+<div class="block-header">تطبيق عملي</div>
+<div class="app-scenario">📌 لخص في سطرين كيف يدفع الإيمان بالرسل المسلم إلى الاطمئنان القلبي والحرص على العمل الصالح.</div>
+<div class="block-header">ملخص الدرس (خريطة ذهنية)</div>
+<div class="tree-container">
+<div class="tree-root">خلاصة وثمرات الإيمان بالرسل</div>
+<div class="tree-branches">
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>الثمرات</h4>
+<p>استشعار رحمة الله ومحبة الأنبياء</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>الفروق</h4>
+<p>النبوة وهبية وأصل الدين واحد</p>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-leaf">
+<h4>الواجب السلوكي</h4>
+<p>الاتباع التام ونبذ الغلو</p>
+</div>
+</div>
+</div>
+</div>
+<div class="block-header">أسئلة الفهم</div>
+<div class="ex-box" id="ex-6-1">
+<div class="ex-q">1. ما عقيدة أهل السنة في طريقة نيل النبوة؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(6,1,this,true,'أحسنت، اصطفاء وهبة ربانية لا تنال بالاكتساب.')">اصطفاء وهبة إلهية محضة</button>
+<button class="ex-btn" onclick="act(6,1,this,false,'خطأ، النبوة لا تكتسب بالرياضة.')">تكتسب بكثرة الزهد والرياضة الروحية</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-6-2">
+<div class="ex-q">2. ما مجال العصمة المطلقة للأنبياء باتفاق الأمة؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(6,2,this,true,'صحيح، في تبليغ الوحي ومن الكبائر.')">في تبليغ الوحي ومن اقتراف الكبائر</button>
+<button class="ex-btn" onclick="act(6,2,this,false,'إجابة غير دقيقة.')">في أمور الزراعة والمعايش الدنيوية فقط</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-6-3">
+<div class="ex-q">3. ما الثمرة العظمى لمعرفة أن دين الأنبياء واحد؟</div>
+<div class="ex-opts">
+<button class="ex-btn" onclick="act(6,3,this,true,'أحسنت، إدراك وحدة الحقيقة الإيمانية القائمة على التوحيد.')">إدراك وحدة دعوة التوحيد عبر التاريخ</button>
+<button class="ex-btn" onclick="act(6,3,this,false,'خطأ.')">جواز اتباع شرائع منسوخة اليوم</button>
+</div>
+<div class="ex-fb"></div>
+</div>
+<div class="ex-box" id="ex-6-4">
+<div class="ex-q">4. صل المفاهيم بما يناسبها:</div>
+<div class="game-grid" id="game-6"></div>
+</div>
+<div class="progress-tracker">
+<span>التقدم في هذا الموضوع:</span>
+<div class="prog-dots" id="dots-6">
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+<div class="prog-dot"></div>
+</div>
+</div>
+<div class="nav-row">
+<button class="nav-btn btn-outline" onclick="goSlide(5)">◁ السابق</button>
+<button class="nav-btn btn-gold" disabled="" id="next-6" onclick="finishLesson()">✓ إتمام الدروس والانتقال</button>
+</div>
+</div>
+<!-- ================= TAB: REVIEW (المراجعة الشاملة) ================= -->
+<div class="scr" id="s-review">
+<div class="hero-banner" style="background:var(--navy); color:#fff; border:none;">
+<div class="hero-icon" style="color:var(--gold);">🧠</div>
+<div class="hero-title" style="color:#fff;">المراجعة الشاملة</div>
+<div class="hero-sub" style="color:var(--gold-light);">بطاقات المفاهيم والأسئلة المقالية لترسيخ الفهم العالي لمباحث الإيمان بالرسل</div>
+</div>
+<div class="block-header">أولاً: بطاقات المفاهيم (اضغط للقلب)</div>
+<div class="fc-grid" id="fcBox"></div>
+<div class="block-header" style="margin-top:40px;">ثانياً: الأسئلة المقالية العقدية (١٠ أسئلة)</div>
+<div class="essay-list">
+<div class="essay-item essay-navy" onclick="this.classList.toggle('open')">
+<div class="essay-q">1. ما حكم الإيمان بالرسل وما الدليل عليه؟</div>
+<div class="essay-a">الإيمان بالرسل ركن من أركان الإيمان وفرض عين على كل مسلم، ودليله قوله تعالى: ﴿آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ﴾.</div>
+</div>
+<div class="essay-item essay-gold" onclick="this.classList.toggle('open')">
+<div class="essay-q">2. بين علة بشرية الرسل وعدم جعلهم من الملائكة.</div>
+<div class="essay-a">لأن الإنسان بحاجة إلى قدوة عملية من جنسه في مقدوره التأسي بها في العبادة والسلوك ومواجهة الابتلاءات، ولو كانوا ملائكة لما أمكن للبشر مجانستهم أو الاقتداء بهم.</div>
+</div>
+<div class="essay-item essay-navy" onclick="this.classList.toggle('open')">
+<div class="essay-q">3. ما حكم من آمن بجميع الرسل وكذب برسالة محمد ﷺ؟</div>
+<div class="essay-a">هو كافر خارج عن الملة بإجماع المسلمين؛ لأن تكذيب رسول واحد هو تكذيب لجميع الرسل وتكذيب لله تعالى الذي أرسلهم وفرض طاعتهم.</div>
+</div>
+<div class="essay-item essay-gold" onclick="this.classList.toggle('open')">
+<div class="essay-q">4. اذكر أسماء أولي العزم الخمسة من الرسل ومن أفضلهم؟</div>
+<div class="essay-a">أولو العزم هم: نوح، إبراهيم، موسى، عيسى، ومحمد ﷺ، وأفضلهم على الإطلاق هو خاتمهم نبينا محمد ﷺ سيد ولد آدم.</div>
+</div>
+<div class="essay-item essay-navy" onclick="this.classList.toggle('open')">
+<div class="essay-q">5. فسر معنى قول النبي ﷺ: «الأنبياء إخوة لعلات أمهاتهم شتى ودينهم واحد».</div>
+<div class="essay-a">أولاد العلات هم الإخوة من أب واحد وأمهات مختلفات؛ والمعنى أن دين وعقيدة الأنبياء واحدة وهي التوحيد وإخلاص الدين لله (الإسلام)، بينما شرائعهم وأحكامهم الفرعية تختلف وتتنوع بحسب ما يناسب كل أمة وزمان.</div>
+</div>
+<div class="essay-item essay-gold" onclick="this.classList.toggle('open')">
+<div class="essay-q">6. بين بطلان القول بأن النبوة مكتسبة بالرياضة الروحية والاجتهاد.</div>
+<div class="essay-a">النبوة اصطفاء إلهي محض وتفضل وهبة من الله لمن يشاء من عباده: ﴿اللَّهُ أَعْلَمُ حَيْثُ يَجْعَلُ رِسَالَتَهُ﴾، ولا مدخل للجهد البشري أو العبادة أو المنصب في نيلها.</div>
+</div>
+<div class="essay-item essay-navy" onclick="this.classList.toggle('open')">
+<div class="essay-q">7. وضح كيف استدل هرقل ملك الروم بأحوال النبي ﷺ على صدقه.</div>
+<div class="essay-a">سأل أبا سفيان 10 أسئلة فاستنتج أنه لبث 40 سنة لم يجرب عليه كذب فاستحال أن يكذب على الله، وأن أتباعه يزيدون ولا يرتدون وذلك شأن الإيمان، وأنه يأمر بالتوحيد والعفاف والصدق وهي دعوة الرسل.</div>
+</div>
+<div class="essay-item essay-gold" onclick="this.classList.toggle('open')">
+<div class="essay-q">8. ما الفرق بين العصمة في التبليغ ووقوع الصغائر من الأنبياء؟</div>
+<div class="essay-a">الأنبياء معصومون إجماعاً في تبليغ الوحي ومن الوقوع في الكبائر، أما الصغائر غير المتعلقة بالتبليغ فقد تقع لكنهم لا يُقرون عليها بل ينبههم الله فوراً فيبادرون بالتوبة وتكون منزلتهم بعدها أعظم.</div>
+</div>
+<div class="essay-item essay-navy" onclick="this.classList.toggle('open')">
+<div class="essay-q">9. اذكر أربعة من حقوق النبي محمد ﷺ على أمته.</div>
+<div class="essay-a">1) التصديق والطاعة فيما أمر. 2) تقديم محبته على النفس والمال. 3) الصلاة والتسليم عليه. 4) توقير سنته وموالاة أصحابه وآل بيته وتجنب الغلو فيه.</div>
+</div>
+<div class="essay-item essay-gold" onclick="this.classList.toggle('open')">
+<div class="essay-q">10. بين مظهرين من مظاهر الغلو الشركي المحرم في حق النبي ﷺ.</div>
+<div class="essay-a">دعاؤه والاستغاثة به في كشف الكربات، أو الطواف بقبره والذبح والنذر له؛ لأن هذه عبادات محضة لا تصرف إلا لله وحده.</div>
+</div>
+</div>
+</div>
+<!-- ================= TAB: QUIZ (التقييم النهائي) ================= -->
+<div class="scr" id="s-quiz">
+<div class="hero-banner" style="background:#fdfaf3;">
+<div class="hero-icon">🎓</div>
+<div class="hero-title">التقييم الشامل والنهائي</div>
+<div class="hero-sub">يحتوي على ٢٠ سؤالاً لتقييم فهمك لمحاضرة الإيمان بالرسل (النتيجة تُرسل للدكتور آلياً)</div>
+<div class="hero-line"></div>
+</div>
+<div id="qzBox"></div>
+</div>
+</div>
+<!-- ================= BOTTOM NAVIGATION BAR ================= -->
+<div class="bottom-bar" id="bottomBar">
+<button aria-label="طي أو فتح شريط التنقل" class="bbar-toggle" id="bbarToggle" onclick="toggleBottom()" title="طي/فتح شريط التنقل">▼</button>
+<div class="bottom-inner">
+<button class="btab act" data-t="lesson" onclick="switchTab('lesson')">📚 الدرس</button>
+<button class="btab locked" data-t="review" id="tab-review" onclick="switchTab('review')">🧠 المراجعة</button>
+<button class="btab locked" data-t="quiz" id="tab-quiz" onclick="switchTab('quiz')">📝 التقييم</button>
+</div>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+<div class="toast-admin" id="adminToast"></div>
+<!-- ================= نافذة لوحة التحكم (Modal) ================= -->
+<div class="modal-backdrop" id="adminModal">
+<div class="modal">
+<div class="modal-header">
+<div class="modal-title">⚙️ لوحة تحكم أستاذ المادة</div>
+<button aria-label="إغلاق" class="modal-close" onclick="hideAdminPanel()">✕</button>
+</div>
+<div class="modal-body">
+<!-- شاشة تسجيل الدخول -->
+<div class="login-prompt" id="adminLogin">
+<div class="login-prompt-icon">🔐</div>
+<div class="login-prompt-text">يرجى إدخال كلمة المرور للوصول إلى إعدادات المقرر</div>
+<input class="form-input" id="adminPwd" onkeypress="if(event.key==='Enter')handleAdminLogin()" placeholder="كلمة المرور" style="text-align:center;" type="password"/>
+<button class="nav-btn btn-navy" onclick="handleAdminLogin()" style="width:100%; margin-top:12px;">دخول</button>
+<div class="login-hint">
+          💡 <strong>كلمة المرور الافتراضية:</strong> <code style="background:#fff; padding:2px 6px; border-radius:4px;">admin123</code> — يُنصح بتغييرها فور الدخول الأول.
+        </div>
+</div>
+<!-- شاشة الإعدادات -->
+<div id="adminSettings" style="display:none;">
+<div class="form-section-title">📋 الإعدادات الأساسية</div>
+<div class="form-group">
+<label class="form-label" for="settingDoctorName">اسم الدكتور (يظهر في الهيدر وشاشة الدخول)</label>
+<input class="form-input" id="settingDoctorName" placeholder="مثال: د/ باسم القرافي" type="text"/>
+</div>
+<div class="form-section-title">📊 إعدادات Google Form</div>
+<div class="form-group">
+<label class="form-label" for="settingFormUrl">رابط النموذج (يجب أن ينتهي بـ <code>formResponse</code>)</label>
+<input class="form-input" dir="ltr" id="settingFormUrl" placeholder="https://docs.google.com/forms/d/e/.../formResponse" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>معرّفات الحقول (Entry IDs) — اتركها كما هي إلا إذا غيّرت النموذج</summary>
+<div class="form-group">
+<label class="form-label">عنوان المحاضرة</label>
+<input class="form-input" dir="ltr" id="settingEntryLecture" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">اسم الطالب</label>
+<input class="form-input" dir="ltr" id="settingEntryName" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">رقم الشعبة</label>
+<input class="form-input" dir="ltr" id="settingEntrySection" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">الدرجة</label>
+<input class="form-input" dir="ltr" id="settingEntryScore" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">الزمن</label>
+<input class="form-input" dir="ltr" id="settingEntryTime" type="text"/>
+</div>
+</details>
+<div class="form-section-title">🔒 تغيير كلمة المرور (اختياري)</div>
+<div class="form-group">
+<label class="form-label" for="settingNewPwd">كلمة المرور الجديدة (6 أحرف على الأقل)</label>
+<input class="form-input" id="settingNewPwd" placeholder="اتركها فارغة لعدم التغيير" type="password"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="settingConfirmPwd">تأكيد كلمة المرور الجديدة</label>
+<input class="form-input" id="settingConfirmPwd" type="password"/>
+</div>
+<div class="modal-actions">
+<button class="nav-btn btn-save" onclick="handleAdminSave()">💾 حفظ الإعدادات</button>
+<button class="nav-btn btn-reset" onclick="handleAdminReset()">🔄 استعادة الافتراضي</button>
+<button class="nav-btn btn-cancel" onclick="hideAdminPanel()">✕ إلغاء</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+const GAMES = {
+  1: {pairs:[{l:"10 قرون",r:"فترة الاستقامة على التوحيد"},{l:"نوح عليه السلام",r:"أول رسول بعد الانحراف"},{l:"بشرية الرسل",r:"لتحقيق القدوة العملية"},{l:"تكذيب رسول واحد",r:"كفر بالجميع وبمن أرسلهم"}]},
+  2: {pairs:[{l:"إخراج العباد",r:"من عبادة الخلق إلى الخالق"},{l:"إقامة الحجة",r:"قطع المعذرة عن البشر"},{l:"بيان المغيبات",r:"ما لا تدركه العقول المجردة"},{l:"تزكية النفوس",r:"تتميم مكارم الأخلاق"}]},
+  3: {pairs:[{l:"النبوة",r:"هبة واصطفاء لا تكتسب"},{l:"أولو العزم",r:"خمسة أفضلهم محمد ﷺ"},{l:"إخوة لعلات",r:"دينهم واحد وشرائعهم شتى"},{l:"علم الغيب",r:"لا يعلمونه إلا بوحي خاص"}]},
+  4: {pairs:[{l:"القرآن الكريم",r:"المعجزة العظمى الخالدة"},{l:"استدلال هرقل",r:"10 أسئلة كشفت صدقه"},{l:"عبد الله بن سلام",r:"وجهه ليس بوجه كذاب"},{l:"40 سنة لبثاً",r:"دلالة الصدق والأمانة"}]},
+  5: {pairs:[{l:"طاعة النبي ﷺ",r:"فيما أمر واجتناب ما نهى"},{l:"الصلاة عليه",r:"يصلي الله بها عشراً"},{l:"أصحابه وآله",r:"محبتهم وعدم سبهم"},{l:"تجنب الغلو",r:"عدم دعائه وصرف العبادة له"}]},
+  6: {pairs:[{l:"ثمرة الإيمان",r:"استشعار رحمة الله وعنايته"},{l:"العصمة المطلقة",r:"في التبليغ ومن الكبائر"},{l:"عموم الرسالة",r:"للإنس والجن كافة"},{l:"الصغائر للأنبياء",r:"لا يقرون عليها ويتوبون فوراً"}]}
+};
+
+const FLASHCARDS = [
+  {"q": "ما حكم الإيمان بالرسل؟", "a": "ركن من أركان الإيمان، وفرض عين لا يصح إيمان عبد بدونه."},
+  {"q": "ما علة بشرية الرسل وعدم إرسالهم ملائكة؟", "a": "لأن البشر بحاجة لنموذج عملي بشري يقتدون به في سلوكهم وعبادتهم."},
+  {"q": "ما حكم من آمن بجميع الرسل وكذب برسالة محمد ﷺ؟", "a": "كافر بإجماع المسلمين، ولا ينفعه إيمانه بالسابقين؛ لأن تكذيب رسول واحد تكذيب للجميع."},
+  {"q": "كم عدد الأنبياء والرسل المذكورين بالاسم في القرآن الكريم؟", "a": "25 نبياً ورسولاً (18 في سورة الأنعام و7 في مواضع أخرى)."},
+  {"q": "من هم أولو العزم من الرسل؟", "a": "نوح، إبراهيم، موسى، عيسى، ومحمد ﷺ."},
+  {"q": "من هو أفضل أولي العزم وخاتم النبيين؟", "a": "نبينا محمد ﷺ سيد ولد آدم."},
+  {"q": "ما المراد بقوله ﷺ: «الأنبياء إخوة لعلّات»؟", "a": "دينهم وعقيدتهم واحدة (التوحيد والإسلام) وشرائعهم وأحكامهم العملية مختلفة ومتنوعة."},
+  {"q": "هل النبوة مكتسبة بالاجتهاد في العبادة أم وهبية؟", "a": "وهبية تفضل واصطفاء من الله تعالى ولا تُنال بالكسب أو الطلب."},
+  {"q": "ما المعجزة العظمى الخالدة لنبينا محمد ﷺ؟", "a": "القرآن الكريم الذي تكفل الله بحفظه."},
+  {"q": "ما حكم عصمة الأنبياء في تبليغ الوحي وعن الكبائر؟", "a": "معصومون عصمة تامة باتفاق الأمة."},
+  {"q": "كيف يُفسر وقوع الصغائر من بعض الأنبياء كآدم عليه السلام؟", "a": "لا يُقرون عليها، ويبادرون فوراً بالتوبة فيجتبيهم الله وتكون درجتهم بعد التوبة أعلى وأكمل."},
+  {"q": "من ملك الروم الذي استدل بأحوال النبي ﷺ على صدقه؟", "a": "هرقل ملك الروم بعد سؤاله لأبي سفيان."},
+  {"q": "ماذا قال الصحابي الجليل عبد الله بن سلام ؓ حين رأى وجه النبي ﷺ أول مرة؟", "a": "قال: «عرفت أن وجهه ليس بوجه كذاب»."},
+  {"q": "ما معنى الضلال في قوله تعالى: ﴿وَوَجَدَكَ ضَآلًّا فَهَدَىٰ﴾ في حق النبي ﷺ؟", "a": "الغفلة عن تفاصيل أمر النبوة والشرائع والحيرة، وليس ضلال غواية أو شرك."},
+  {"q": "اذكر مظهرين من مظاهر الغلو المحرم في حق النبي ﷺ.", "a": "الاستغاثة به ودعاؤه من دون الله، أو الطواف بقبره والنذر له."},
+  {"q": "ما هي ثمرة معرفة أن الرسل بشر لا يعلمون الغيب؟", "a": "إفراد الله وحده بخصائص الربوبية وقطع التعلق والشرك بالمخلوقين."}
+];
+
+const QUIZ = [
+  {"q": "أول رسول بعثه الله إلى البشرية بعد وقوع الانحراف والشرك هو:", "o": ["آدم عليه السلام", "نوح عليه السلام", "إبراهيم عليه السلام", "إدريس عليه السلام"], "a": 1},
+  {"q": "حكم من آمن بجميع الرسل وكذب برسول واحد كعيسى أو محمد عليهما السلام:", "o": ["مؤمن ناقص الإيمان", "كافر بجميع الرسل وبالمرسل سبحانه", "معذور لجهله", "فاسق وتصح أصول عقيدته"], "a": 1},
+  {"q": "الحكمة من جعل الرسل من جنس البشر لا من الملائكة هي:", "o": ["تعجيز الكفار عن رؤيتهم", "ليكونوا نموذجاً عملياً يُقتدى به في مقدور البشر", "لأن الملائكة لا يستطيعون التحدث بالعربية", "تخفيفاً للتكليف بحيث لا يلزم اتباعهم"], "a": 1},
+  {"q": "النبوة عند أهل السنة والجماعة صفة:", "o": ["تُكتسب بالرياضة الروحية", "تُنال بالحرص وطلب المنصب", "اصطفائية وهبية يمن الله بها على من يشاء", "تورث من الآباء إلى الأبناء"], "a": 2},
+  {"q": "عدد الأنبياء والرسل الذين وردت أسماؤهم صراحة في القرآن الكريم هو:", "o": ["313 نبياً ورسولاً", "25 نبياً ورسولاً", "18 نبياً ورسولاً", "124 ألف نبي"], "a": 1},
+  {"q": "أفضل أولي العزم من الرسل على الإطلاق هو:", "o": ["إبراهيم عليه السلام", "موسى عليه السلام", "نوح عليه السلام", "محمد ﷺ"], "a": 3},
+  {"q": "هل يعلم الرسل عليهم السلام كل تفاصيل الغيب استقلالاً وبذواتهم؟", "o": ["نعم يعلمون كل شيء بذواتهم", "لا، لا يعلمون إلا ما أطلعهم الله عليه بوحي خاص", "يعلمون الماضي فقط دون المستقبل", "يعلمون الغيب متى شاءوا"], "a": 1},
+  {"q": "معنى قوله ﷺ: «الأنبياء إخوة لعلات» أي أنهم:", "o": ["مختلفون في أصل الدين وأحكام الشريعة", "متفقون في أصل الدين (التوحيد) ومختلفون في الشرائع والأحكام", "متفقون في الشرائع الفرعية دون التوحيد", "ولدوا جميعاً في عصر واحد"], "a": 1},
+  {"q": "أي من الآتي يمثل المعجزة العظمى الخالدة الباقية للنبي محمد ﷺ؟", "o": ["انشقاق القمر", "نبع الماء من بين أصابعه", "القرآن الكريم", "حنين الجذع"], "a": 2},
+  {"q": "ما حكم عصمة الأنبياء في تبليغ الوحي وعن الكبائر باتفاق الأمة؟", "o": ["جائزة وليست واجبة", "معصومون عصمة تامة مطلقة", "معصومون من الصغائر دون الكبائر", "غير معصومين في التبليغ"], "a": 1},
+  {"q": "استدل هرقل على نبوة النبي ﷺ بكون أتباعه يزيدون ولا ينقصون؛ لأن شأن الإيمان الصادق:", "o": ["ينتهي بسرعة بعد موت صاحبه", "يثبت ويزداد حين تخالط بشاشته القلوب حتى يتم", "يتبعه الأشراف والملوك فقط", "يقوم على الإكراه والمصلحة"], "a": 1},
+  {"q": "قوله تعالى لنبيه ﷺ: ﴿وَوَجَدَكَ ضَآلًّا فَهَدَىٰ﴾ يعني في حق النبي ﷺ:", "o": ["الغفلة عن تفاصيل النبوة والشرائع قبل الوحي والحيرة", "الوقوع في عبادة الأصنام", "اتباع دين النصارى", "ارتكاب الكبائر قبل البعثة"], "a": 0},
+  {"q": "من حقوق النبي ﷺ تجنب الغلو فيه، ومن صور الغلو الشركي المحرم في حقه:", "o": ["الصلاة والتسليم عليه عند ذكره", "دراسة سيرته ونشر سنته", "دعاؤه والاستغاثة به وصرف النذر له", "تقديم محبته على النفس والمال"], "a": 2},
+  {"q": "حرمة النبي ﷺ وتوقيره بعد موته ودفنه في الشريعة:", "o": ["سقطت بوفاته", "كحرمته في حياته فلا ترفع الأصوات عند قبره وتعظم سنته", "مقصورة على الصلاة عليه فقط دون توقير سنته", "تبيح صرف الدعاء له عند قبره"], "a": 1},
+  {"q": "أكمل الفراغ: قال رسول الله ﷺ: «من صلى علي صلاة صلى الله عليه بها ..........»:", "o": ["ثلاثاً", "عشراً", "سبعين", "مائة"], "a": 1},
+  {"q": "الشاهد من قوله تعالى: ﴿فَقَدْ لَبِثْتُ فِيكُمْ عُمُرًا مِّن قَبْلِهِ أَفَلَا تَعْقِلُونَ﴾ على صدق النبوة:", "o": ["أنه كان يطلب الملك من قريش", "بقاؤه 40 سنة معروفا بالصدق دون تطلع للنبوة حتى أتاه الوحي مفاجئاً", "معرفته بالقراءة والكتابة السابقة", "كثرة أسفاره إلى بلاد الروم"], "a": 1},
+  {"q": "موقف المسلم الواجب تجاه صحابة النبي ﷺ وأهل بيته وأزواجه:", "o": ["موالاتهم جميعاً ومحبتهم والكف عما شجر بينهم وعدم سبهم", "تفضيل أهل البيت وبغض سائر الصحابة", "التوقف في عدالتهم حتى نتبين", "جواز الطعن فيمن خالف بعض الآراء"], "a": 0},
+  {"q": "من ثمرات الإيمان بالرسل المستفادة سلوكياً وإيمانياً:", "o": ["ترك العمل والاتكال على شفاعتهم", "العلم برحمة الله وعنايته بعباده والاقتداء بهم في العبادة والأخلاق", "جواز التبرك بذوات من يدعي الصلاح", "مساواتهم بالملائكة في جميع الخصائص"], "a": 1},
+  {"q": "كم عدد الأنبياء والرسل الذين ورد ذكرهم في سياق واحد في سورة الأنعام؟", "o": ["سبعة أنبياء", "عشرة أنبياء", "ثمانية عشر نبياً", "خمسة وعشرون نبياً"], "a": 2},
+  {"q": "الدليل القطعي الصريح على عموم رسالة النبي محمد ﷺ لكافة الناس:", "o": ["﴿وَإِلَى مَدْيَنَ أَخَاهُمْ شُعَيْبًا﴾", "﴿قُلْ يَأَيُّهَا النَّاسُ إِنِّي رَسُولُ اللَّهِ إِلَيْكُمْ جَمِيعًا﴾", "﴿إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ﴾", "﴿وَوَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ﴾"], "a": 1}
+];
+
+/* ================= STATE & LOGIC ================= */
+let user={n:'',s:''}, curSlide=0, startTime=null;
+let progress = { 1:new Set(), 2:new Set(), 3:new Set(), 4:new Set(), 5:new Set(), 6:new Set() };
+let activeL = null;
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const toast = m => { const t=$('#toast'); t.textContent=m; t.classList.add('on'); setTimeout(()=>t.classList.remove('on'), 3000); };
+
+function doLogin(){
+  const n=$('#iName').value.trim(), s=$('#iSec').value.trim();
+  if(!n||!s) return toast('⚠️ يرجى إدخال الاسم الكامل والشعبة');
+  user={n,s}; $('#stuInfo').textContent=`${n} | الشعبة: ${s}`;
+  $('#mainHeader').style.display='flex'; $('#bottomBar').style.display='flex';
+  startTime = Date.now();
+  renderGames(); renderReview(); renderQuiz();
+  goSlide(0);
+}
+
+function goSlide(i){
+  $$('.scr').forEach(s=>s.classList.remove('on'));
+  $(`#s-${i}`).classList.add('on');
+  curSlide = i; window.scrollTo({top:0, behavior:'smooth'});
+  
+  const vid = $('video');
+  if(vid && i !== 0) vid.pause();
+}
+
+function switchTab(t){
+  const btn = $(`#tab-${t}`);
+  if(btn && btn.classList.contains('locked')) return toast('🔒 أكمل أبواب المحاضرة الستة أولاً لفتح المراجعة والتقييم');
+  
+  const vid = $('video');
+  if(vid) vid.pause();
+
+  $$('.scr').forEach(s=>s.classList.remove('on'));
+  if(t==='lesson') $(`#s-${curSlide}`).classList.add('on');
+  else $(`#s-${t}`).classList.add('on');
+  
+  $$('.btab').forEach(b=>b.classList.remove('act'));
+  $(`.btab[data-t="${t}"]`).classList.add('act');
+  window.scrollTo(0,0);
+}
+
+function toggleAcc(el){ el.classList.toggle('active'); }
+
+function act(slide, exNum, btn, isCorrect, msg){
+  const box = btn.closest('.ex-box');
+  const fb = box.querySelector('.ex-fb');
+  box.querySelectorAll('.ex-btn').forEach(b => b.style.display='none');
+  fb.textContent = msg;
+  fb.className = 'ex-fb ' + (isCorrect ? 'right' : 'wrong');
+  markDone(slide, exNum);
+}
+
+function markDone(slide, exNum){
+  progress[slide].add(exNum);
+  const dots = $$(`#dots-${slide} .prog-dot`);
+  if(dots[exNum-1]) dots[exNum-1].classList.add('done');
+  if(progress[slide].size === parseInt($(`#s-${slide}`).dataset.req)){
+    const nextBtn = $(`#next-${slide}`);
+    if(nextBtn) { nextBtn.disabled = false; toast('✅ أتممت المطلوب، تفضل للدرس التالي.'); }
+  }
+}
+
+function finishLesson(){
+  toast('🎉 عظيم! لقد أنهيت المحاضرة بالكامل. تم فتح المراجعة والتقييم لك.');
+  $$('.btab.locked').forEach(b => b.classList.remove('locked'));
+  switchTab('review');
+}
+
+function renderGames(){
+  for(let i=1; i<=6; i++){
+    if(!GAMES[i]) continue;
+    const g = GAMES[i], sh =[...g.pairs].sort(()=>Math.random()-.5);
+    $(`#game-${i}`).innerHTML = `
+      <div style="display:flex;flex-direction:column;gap:10px">${g.pairs.map((p,idx)=>`<div class="g-item" onclick="pickL(${i},this,${idx})">${p.l}</div>`).join('')}</div>
+      <div style="display:flex;flex-direction:column;gap:10px">${sh.map((p)=>`<div class="g-choice" onclick="pickR(${i},this,'${p.r}')">${p.r}</div>`).join('')}</div>`;
+  }
+}
+
+function pickL(s, el, idx){ $$(`#game-${s} .g-item`).forEach(e=>e.classList.remove('active')); el.classList.add('active'); activeL={s, el, idx}; }
+function pickR(s, el, txt){
+  if(!activeL || activeL.s !== s) return;
+  if(txt === GAMES[s].pairs[activeL.idx].r){
+    activeL.el.classList.add('done'); el.classList.add('done'); activeL = null;
+    if([...$$(`#game-${s} .g-item`)].every(e=>e.classList.contains('done'))) markDone(s, 4);
+  } else { toast('❌ غير مطابق، حاول مجدداً'); activeL.el.classList.remove('active'); activeL = null; }
+}
+
+function renderReview(){
+  $('#fcBox').innerHTML = FLASHCARDS.map(c=>`<div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">${c.q}</div><div class="fc-b">${c.a}</div></div></div>`).join('');
+}
+
+let score=0, answered=0;
+function renderQuiz(){
+  $('#qzBox').innerHTML = QUIZ.map((q,i)=>`<div class="qz-card" id="qc-${i}"><h3 style="margin-bottom:20px;color:var(--navy);font-family:var(--font-title);line-height:1.6;">س${i+1}: ${q.q}</h3>${q.o.map((o,j)=>`<button class="qz-opt" onclick="ansQ(${i},${j},this)">${o}</button>`).join('')}</div>`).join('') + `<div id="qzRes"></div>`;
+}
+
+function ansQ(qi, oi, btn){
+  const card = $(`#qc-${qi}`); if(card.dataset.done) return;
+  card.dataset.done = '1';
+  const btns = card.querySelectorAll('.qz-opt'); btns.forEach(b => b.disabled = true);
+  if(oi === QUIZ[qi].a){ btn.classList.add('right'); score++; } 
+  else { btn.classList.add('wrong'); btns[QUIZ[qi].a].classList.add('right'); }
+  answered++; if(answered === QUIZ.length) finishQuiz();
+}
+
+function finishQuiz(){
+  const s = Math.floor((Date.now() - startTime)/1000);
+  const timeStr = `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+
+  const formUrl = getSetting(STORAGE_KEYS.formUrl, DEFAULT_SETTINGS.formUrl);
+  const entries = getSetting(STORAGE_KEYS.entries, DEFAULT_SETTINGS.entries);
+
+  const fd = new FormData();
+  fd.append("entry." + entries.lecture, "الرابعة");
+  fd.append("entry." + entries.name, user.n);
+  fd.append("entry." + entries.section, user.s);
+  fd.append("entry." + entries.score, score);
+  fd.append("entry." + entries.time, timeStr);
+  fetch(formUrl, { method: "POST", mode: "no-cors", body: fd }).catch(e=>console.log(e));
+
+  $('#qzRes').innerHTML = `<div style="text-align:center; padding:40px; background:#f8fafc; border-radius:16px; border:2px solid var(--gold); margin-top:30px;"><h2 style="color:var(--navy);font-family:var(--font-title);">انتهى التقييم!</h2><div style="font-size:4rem;font-weight:900;color:var(--green);margin:15px 0;">${score} / ${QUIZ.length}</div><p style="font-size:1.1rem;color:var(--text-main);"><strong>${user.n}</strong> | الشعبة: <strong>${user.s}</strong></p><p style="margin-top:15px; color:var(--text-muted); font-weight:700;">✅ تم إرسال نتيجتك للدكتور. وقت التعلم: ${timeStr} دقيقة.</p></div>`;
+  $('#qzRes').scrollIntoView({behavior:'smooth'});
+}
+
+/* ================= الإعدادات + لوحة التحكم + الطيات ================= */
+const DEFAULT_SETTINGS = {
+  doctorName: 'د/ باسم القرافي',
+  formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfvRzt6yb0ZjOHErqk2DYBRFjMoQ8CTBXTWi84tq14SqF1vEQ/formResponse',
+  entries: {
+    lecture: '701471332',
+    name:    '475273358',
+    section: '549530031',
+    score:   '150771392',
+    time:    '128332917'
+  }
+};
+
+const STORAGE_KEYS = {
+  doctorName:      'courseDoctorName',
+  formUrl:         'courseFormUrl',
+  entries:         'courseFormEntries',
+  passwordHash:    'adminPasswordHash',
+  headerCollapsed: 'courseHeaderCollapsed',
+  bottomCollapsed: 'courseBottomCollapsed'
+};
+
+function getSetting(key, fallback) {
+  const v = localStorage.getItem(key);
+  if (v === null) return fallback;
+  try { return JSON.parse(v); } catch (e) { return v; }
+}
+function setSetting(key, value) {
+  localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
+}
+
+async function sha256(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+async function ensureDefaultPassword() {
+  if (!localStorage.getItem(STORAGE_KEYS.passwordHash)) {
+    const hash = await sha256('admin123');
+    localStorage.setItem(STORAGE_KEYS.passwordHash, hash);
+  }
+}
+async function verifyPassword(pwd) {
+  await ensureDefaultPassword();
+  const stored = localStorage.getItem(STORAGE_KEYS.passwordHash);
+  return (await sha256(pwd)) === stored;
+}
+async function changePassword(newPwd) {
+  localStorage.setItem(STORAGE_KEYS.passwordHash, await sha256(newPwd));
+}
+
+function applySettingsToUI() {
+  const docName = getSetting(STORAGE_KEYS.doctorName, DEFAULT_SETTINGS.doctorName);
+  document.querySelectorAll('.hdr-dr').forEach(el => el.textContent = docName);
+  const wDr = document.querySelector('.w-dr');
+  if (wDr) wDr.textContent = 'إعداد: ' + docName;
+
+  const hdr  = document.getElementById('mainHeader');
+  const bar  = document.getElementById('bottomBar');
+  const hBtn = document.getElementById('hdrToggle');
+  const bBtn = document.getElementById('bbarToggle');
+
+  if (getSetting(STORAGE_KEYS.headerCollapsed, '0') === '1' && hdr) {
+    hdr.classList.add('collapsed');
+    if (hBtn) hBtn.textContent = '▲';
+  }
+  if (getSetting(STORAGE_KEYS.bottomCollapsed, '0') === '1' && bar) {
+    bar.classList.add('collapsed');
+    if (bBtn) bBtn.textContent = '▲';
+  }
+}
+
+function toggleHeader() {
+  const hdr = document.getElementById('mainHeader');
+  if (!hdr) return;
+  hdr.classList.toggle('collapsed');
+  const collapsed = hdr.classList.contains('collapsed');
+  setSetting(STORAGE_KEYS.headerCollapsed, collapsed ? '1' : '0');
+  const btn = document.getElementById('hdrToggle');
+  if (btn) btn.textContent = collapsed ? '▲' : '▼';
+}
+
+function toggleBottom() {
+  const bar = document.getElementById('bottomBar');
+  if (!bar) return;
+  bar.classList.toggle('collapsed');
+  const collapsed = bar.classList.contains('collapsed');
+  setSetting(STORAGE_KEYS.bottomCollapsed, collapsed ? '1' : '0');
+  const btn = document.getElementById('bbarToggle');
+  if (btn) btn.textContent = collapsed ? '▲' : '▼';
+}
+
+/* ================= لوحة التحكم ================= */
+function showAdminPanel() {
+  document.getElementById('adminModal').classList.add('on');
+  document.getElementById('adminLogin').style.display = 'block';
+  document.getElementById('adminSettings').style.display = 'none';
+  document.getElementById('adminPwd').value = '';
+  setTimeout(() => document.getElementById('adminPwd').focus(), 100);
+}
+function hideAdminPanel() {
+  document.getElementById('adminModal').classList.remove('on');
+}
+function showSettingsView() {
+  document.getElementById('settingDoctorName').value = getSetting(STORAGE_KEYS.doctorName, DEFAULT_SETTINGS.doctorName);
+  document.getElementById('settingFormUrl').value    = getSetting(STORAGE_KEYS.formUrl,    DEFAULT_SETTINGS.formUrl);
+
+  const e = getSetting(STORAGE_KEYS.entries, DEFAULT_SETTINGS.entries);
+  document.getElementById('settingEntryLecture').value = e.lecture;
+  document.getElementById('settingEntryName').value    = e.name;
+  document.getElementById('settingEntrySection').value = e.section;
+  document.getElementById('settingEntryScore').value   = e.score;
+  document.getElementById('settingEntryTime').value    = e.time;
+
+  document.getElementById('settingNewPwd').value = '';
+  document.getElementById('settingConfirmPwd').value = '';
+
+  document.getElementById('adminLogin').style.display = 'none';
+  document.getElementById('adminSettings').style.display = 'block';
+}
+
+async function handleAdminLogin() {
+  const pwd = document.getElementById('adminPwd').value;
+  if (!pwd) { showAdminToast('⚠️ يرجى إدخال كلمة المرور', 'error'); return; }
+  const ok = await verifyPassword(pwd);
+  if (ok) {
+    showSettingsView();
+  } else {
+    showAdminToast('❌ كلمة المرور غير صحيحة', 'error');
+    document.getElementById('adminPwd').value = '';
+  }
+}
+
+async function handleAdminSave() {
+  const newDocName = document.getElementById('settingDoctorName').value.trim();
+  const newFormUrl = document.getElementById('settingFormUrl').value.trim();
+  if (!newDocName) { showAdminToast('⚠️ اسم الدكتور مطلوب', 'error'); return; }
+  if (!newFormUrl) { showAdminToast('⚠️ رابط النموذج مطلوب', 'error'); return; }
+  if (!newFormUrl.includes('formResponse')) { showAdminToast('⚠️ الرابط يجب أن يحتوي على formResponse', 'error'); return; }
+
+  setSetting(STORAGE_KEYS.doctorName, newDocName);
+  setSetting(STORAGE_KEYS.formUrl, newFormUrl);
+
+  const entries = {
+    lecture: document.getElementById('settingEntryLecture').value.trim() || DEFAULT_SETTINGS.entries.lecture,
+    name:    document.getElementById('settingEntryName').value.trim()    || DEFAULT_SETTINGS.entries.name,
+    section: document.getElementById('settingEntrySection').value.trim() || DEFAULT_SETTINGS.entries.section,
+    score:   document.getElementById('settingEntryScore').value.trim()   || DEFAULT_SETTINGS.entries.score,
+    time:    document.getElementById('settingEntryTime').value.trim()    || DEFAULT_SETTINGS.entries.time
+  };
+  setSetting(STORAGE_KEYS.entries, entries);
+
+  const newPwd = document.getElementById('settingNewPwd').value;
+  const cfmPwd = document.getElementById('settingConfirmPwd').value;
+  if (newPwd) {
+    if (newPwd.length < 6) { showAdminToast('⚠️ كلمة المرور يجب ألا تقل عن 6 أحرف', 'error'); return; }
+    if (newPwd !== cfmPwd) { showAdminToast('⚠️ كلمتا المرور غير متطابقتين', 'error'); return; }
+    await changePassword(newPwd);
+  }
+
+  applySettingsToUI();
+  showAdminToast('✅ تم حفظ الإعدادات بنجاح', 'success');
+  setTimeout(hideAdminPanel, 1200);
+}
+
+function handleAdminReset() {
+  if (!confirm('هل تريد استعادة الإعدادات الافتراضية؟\nسيُحذف اسم الدكتور المخصص ورابط النموذج، ولن تتأثر كلمة المرور.')) return;
+  localStorage.removeItem(STORAGE_KEYS.doctorName);
+  localStorage.removeItem(STORAGE_KEYS.formUrl);
+  localStorage.removeItem(STORAGE_KEYS.entries);
+
+  document.getElementById('settingDoctorName').value = DEFAULT_SETTINGS.doctorName;
+  document.getElementById('settingFormUrl').value    = DEFAULT_SETTINGS.formUrl;
+  const e = DEFAULT_SETTINGS.entries;
+  document.getElementById('settingEntryLecture').value = e.lecture;
+  document.getElementById('settingEntryName').value    = e.name;
+  document.getElementById('settingEntrySection').value = e.section;
+  document.getElementById('settingEntryScore').value   = e.score;
+  document.getElementById('settingEntryTime').value    = e.time;
+
+  applySettingsToUI();
+  showAdminToast('✅ تم استعادة الإعدادات الافتراضية', 'success');
+}
+
+function showAdminToast(msg, type) {
+  const t = document.getElementById('adminToast');
+  t.textContent = msg;
+  t.classList.toggle('error', type === 'error');
+  t.classList.add('on');
+  clearTimeout(showAdminToast._t);
+  showAdminToast._t = setTimeout(() => t.classList.remove('on'), 2800);
+}
+
+// اختصار لوحة المفاتيح: Ctrl+Shift+A / Cmd+Shift+A
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+    e.preventDefault();
+    showAdminPanel();
+  }
+  if (e.key === 'Escape') hideAdminPanel();
+});
+
+// تشغيل الإعدادات وضمان كلمة المرور عند تحميل الصفحة
+(async function initSettings() {
+  await ensureDefaultPassword();
+  applySettingsToUI();
+})();
+</script>
+</body>
+</html>
